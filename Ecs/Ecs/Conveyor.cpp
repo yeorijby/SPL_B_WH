@@ -7477,7 +7477,44 @@ BOOL CConveyor::RetrieveStationCheck(CEcsDoc* pDoc)
 	return TRUE;
 }
 
+void CConveyor::BufferFullCheck()
+{
+	CString strLog;
+	int nBUFFER_LINE = 14;		// 상수
+	int nBUFFER_CNT = 6;		// 상수
+	int nTemp = 28;				// 상수 
+	int nCount = 0;
+	for ( int i = 0; i < nBUFFER_LINE; i++ )
+	{
+		if (m_pDoc->m_bBufferSuspend[i] == TRUE)
+			continue;
+
+		int nTempTemp = nTemp + (i * 10) + 2100;
+
+		int nTempTempTemp = 0;
+		for (int j = 0 ; j < nBUFFER_CNT ; j++)
+		{
+			int nTrackNo = nTempTemp - nTempTempTemp++;
+			if (TRACK_INFO[nTrackNo].m_nLuggNum == 0 ||
+				TRACK_INFO[nTrackNo].m_bPltSensor == FALSE) 
+				continue;
+			
+
+			++nCount;		// Count 추가 
+		}
+
+		if (nCount == nBUFFER_CNT)
+		{
+			// Ready 시간 세팅 - 비트 세팅이 성공했을 때 
+
+			// 비트세팅 
+		}
+	}
+}
+
+
 #undef	TRACK_INFO
+
 
 int  CConveyor::WriteTrackInfo(int nTrackNum, int nLuggNum, int nJobType, int nStartPos, int nDestPos, int nLastPallet)
 {

@@ -22,7 +22,7 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CBufferController)
 	enum { IDD = IDD_CV_CTRL1 };
-		// NOTE: the ClassWizard will add data members here
+	BOOL	m_bSuspend;
 	//}}AFX_DATA
 
 // Attribute

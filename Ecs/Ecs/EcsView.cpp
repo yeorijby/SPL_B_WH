@@ -1240,8 +1240,6 @@ void CEcsView::OnTimer(UINT nIDEvent)
 	}
 
 
-
-
 	if(pDoc->m_bAllStackerEmergency == FALSE)
 	{
 		m_bAllSEmergenCheck = FALSE;
@@ -1253,6 +1251,9 @@ void CEcsView::OnTimer(UINT nIDEvent)
 		m_bAllSEmergenCheck = TRUE;
 		UpdateData(FALSE);
 	}
+
+
+
 
 
 	if (nCount % 10 == 0)				// 10초마다 ECS server로 접속시도

@@ -175,11 +175,13 @@
 #define IDC_CHECK_AUTO                  1088
 #define IDC_LIST_COMM                   1090
 #define IDC_EDIT_TRACK_NUM2             1090
+#define IDC_EDIT_READY_TIME             1090
 #define IDC_EDIT_NUM                    1091
 #define IDC_EDIT_TRACK_NUM3             1091
 #define IDC_EDIT_LOCATION               1092
 #define IDC_EDIT_RGV_RANK               1092
 #define IDC_EDIT_TRACK_NUM4             1092
+#define IDC_EDIT_START_TIME             1092
 #define IDC_EDIT_CV_ORDER               1093
 #define IDC_EDIT_TOTAL                  1094
 #define IDC_EDIT_PASSWORD               1096
@@ -221,7 +223,6 @@
 #define IDC_EDIT_LUGG_NUM10             1140
 #define IDC_EDIT_LUGG_NUM11             1141
 #define IDC_EDIT_LUGG_NUM12             1142
-
 #define IDC_EDIT_ECS_ADDR               1247
 #define IDC_EDIT_ECS_PORT               1248
 #define IDC_EDIT_CV_ADDR1               1301

@@ -20,7 +20,7 @@ CBufferController::CBufferController(CWnd* pParent /*=NULL*/)
 	: CDialog(CBufferController::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CBufferController)
-		// NOTE: the ClassWizard will add member initialization here
+	m_bSuspend = FALSE;
 	//}}AFX_DATA_INIT
 
 	for (int i = 0 ; i < 2 ; i++)
@@ -37,7 +37,7 @@ void CBufferController::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CBufferController)
-		// NOTE: the ClassWizard will add DDX and DDV calls here
+	DDX_Check(pDX, IDC_CHK_SUSPEND, m_bSuspend);
 	//}}AFX_DATA_MAP
 }
 
@@ -58,6 +58,8 @@ BOOL CBufferController::OnInitDialog()
 	CString strTemp;//, strTemp1, strTemp2, strTemp3, strTemp4, strTemp5, strTemp6;
 	strTemp.Format(" #%d", m_nID + 1);
 	GetDlgItem(IDC_EDIT_TRACK_NUM)->SetWindowText(strTemp);
+
+//	CTime theTime = CTime::GetCurrentTime();
 
 	int nTemp = 28;			// -6개 
 	int nTempTemp = nTemp + (m_nID * 10) + 2100;
@@ -94,6 +96,13 @@ BOOL CBufferController::OnInitDialog()
 		SET(IDC_EDIT_PLT_SENSOR6 - i, strTemp);														// 배열을 잘못 세팅해서 큰거에서 빼기해줘야함 
 	}
 
+
+	// 일단은 표시하자		- NULL로 세팅을 해야 함! 
+	CString strTime;
+	strTime = (m_pDoc != NULL && m_pDoc->m_timeFullReady[m_nID] != NULL) ? m_pDoc->m_timeFullReady[m_nID].Format("%Y/%m/%d/ %H:%M:%S") : "";
+	GetDlgItem(IDC_EDIT_READY_TIME)->SetWindowText(strTime);
+	strTime = (m_pDoc != NULL && m_pDoc->m_timeStart[m_nID] != NULL) ? m_pDoc->m_timeStart[m_nID].Format("%Y/%m/%d/ %H:%M:%S") : "";
+	GetDlgItem(IDC_EDIT_START_TIME)->SetWindowText(strTime);
 
 
 

@@ -58,6 +58,10 @@ public:
 
 	CCvSocket *m_pConveyorSocket[CV_PLC_CNT];
 	int m_nAlive;
+
+	CTime m_timeFullReady[14];
+	CTime m_timeStart[14];
+	BOOL  m_bBufferSuspend[14];
 	
 	CPtrList m_MsgList;
 
