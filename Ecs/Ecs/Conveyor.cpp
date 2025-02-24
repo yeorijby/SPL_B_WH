@@ -7477,41 +7477,193 @@ BOOL CConveyor::RetrieveStationCheck(CEcsDoc* pDoc)
 	return TRUE;
 }
 
-void CConveyor::BufferFullCheck()
+#define	BUFFER_LINE		14
+#define	BUFFER_CNT		6
+
+// 버퍼 엠티 체크도 있어야 함!
+void CConveyor::BufferEmtpyCheck()
 {
 	CString strLog;
-	int nBUFFER_LINE = 14;		// 상수
-	int nBUFFER_CNT = 6;		// 상수
 	int nTemp = 28;				// 상수 
 	int nCount = 0;
-	for ( int i = 0; i < nBUFFER_LINE; i++ )
+	for ( int i = 0; i < BUFFER_LINE; i++ )		// 14 
 	{
+		// 작업정지일 경우는 체크하지 않는다. 
 		if (m_pDoc->m_bBufferSuspend[i] == TRUE)
 			continue;
 
-		int nTempTemp = nTemp + (i * 10) + 2100;
+		int nTempTemp = nTemp + (i * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
 
 		int nTempTempTemp = 0;
-		for (int j = 0 ; j < nBUFFER_CNT ; j++)
+		for (int j = 0 ; j < BUFFER_CNT ; j++)		// 6
 		{
 			int nTrackNo = nTempTemp - nTempTempTemp++;
 			if (TRACK_INFO[nTrackNo].m_nLuggNum == 0 ||
 				TRACK_INFO[nTrackNo].m_bPltSensor == FALSE) 
 				continue;
 			
-
 			++nCount;		// Count 추가 
 		}
 
-		if (nCount == nBUFFER_CNT)
-		{
-			// Ready 시간 세팅 - 비트 세팅이 성공했을 때 
-
-			// 비트세팅 
+		if (nCount == BUFFER_CNT)
+		{			
+			// 비트세팅			// Ready 시간 세팅 - 비트 세팅이 성공했을 때 
+			
 		}
 	}
 }
 
+void CConveyor::BufferFullCheck()
+{
+	CString strLog;
+	int nTemp = 28;				// 상수 
+	int nCount = 0;
+	for ( int i = 0; i < BUFFER_LINE; i++ )		// 14 
+	{
+		// 작업정지일 경우는 체크하지 않는다. 
+		if (m_pDoc->m_bBufferSuspend[i] == TRUE)
+			continue;
+
+//		// 비트가 온 되어 있는지 확인하라. 
+//		if (비트 == TRUE)
+//			continue;
+
+		int nTempTemp = nTemp + (i * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
+
+		// 맨앞의 목적지 값을 가져와야 하리라. 
+		int nDestPos = TRACK_INFO[nTempTemp].m_nDestPos;
+
+		int nTempTempTemp = 0;
+		for (int j = 0 ; j < BUFFER_CNT ; j++)		// 6
+		{
+			int nTrackNo = nTempTemp - nTempTempTemp++;
+			if (TRACK_INFO[nTrackNo].m_nLuggNum == 0 ||
+				TRACK_INFO[nTrackNo].m_bPltSensor == FALSE) 
+				continue;
+			
+			// 맨 앞의 목적지 값과 같으면 카운트를 추가한다. 
+			if (TRACK_INFO[nTrackNo].m_nDestPos == nDestPos)
+				++nCount;		// Count 추가 
+		}
+
+		if (nCount == BUFFER_CNT)
+		{			
+			// 비트세팅			// Ready 시간 세팅 - 비트 세팅이 성공했을 때 
+			
+		}
+	}
+}
+
+void CConveyor::BufferStartCheck()
+{
+	CString strLog;
+	int i = 0;
+	int nTemp = 28;				// 상수 
+	int nIndex = -1;
+	CTime time = CTime::GetCurrentTime();
+	for ( i = 0; i < BUFFER_LINE; i++ )		// 14
+	{
+		// 작업정지일 경우는 체크하지 않는다. 
+		if (m_pDoc->m_bBufferSuspend[i] == TRUE)
+			continue;
+
+		// 준비가 되지 않았으면 체크하지 않는다. 
+		if (m_timeFullReady[i] == NULL)
+			continue;
+
+		// 준비 시간과 출발 시간이 같으면 체크하지 않는다. - 이런 경우는 없을걸... 
+		if (m_timeFullReady[i] == m_timeStart[i])
+			continue;
+
+		// 가장 빨리 세팅되었던 버퍼 준비 시간의 인덱스를  가져온다. - 우선순위 
+		if (time <= m_timeFullReady[i])
+			nIndex = i;
+	}
+
+	// 버퍼 갯수만큼 Loop 했지만 인덱스를 가져오지 못했을 때 
+	if (nIndex == -1)
+		return;
+
+	///////// 인덱스를 가져왔을때 --- 해당 위치의 화물들을 출발 시킨다. 
+	int nTrackNo = nTemp + (nIndex * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
+
+	BOOL bResult = TRUE;
+	for ( i = 0; i < BUFFER_CNT; i++ )		// 6
+	{
+		int nTrackNum	= nTrackNo - i;
+		int nLuggNum	= TRACK_INFO[nTrackNum].m_nLuggNum;
+		int nLuggNum2	= TRACK_INFO[nTrackNum].m_nLuggNum2;
+		int nJobType	= TRACK_INFO[nTrackNum].m_nJobType;
+		int nStartPos	= TRACK_INFO[nTrackNum].m_nStartPos;
+		int nDestPos	= 15;									// 15나 16중 택일 or  17	// TRACK_INFO[nTrackNum].m_nDestPos;
+		int nComplete	= TRACK_INFO[nTrackNum].m_nComplete;
+		int nSize		= TRACK_INFO[nTrackNum].m_nSize;
+
+		if (WriteTrackInfo7(nTrackNum, nLuggNum, nLuggNum2, nStartPos, nDestPos, nJobType, nComplete, nSize))
+		{
+			//m_nLineCountLuggNum3 = nCurLuggNum;
+			// 출발 시간 Update => 출발시간은 보여주기 위한 부분 일것 같음!
+			m_timeStart[nIndex] = CTime::GetCurrentTime();
+
+			strLog.Format("BufferStartCheck%d.. CV#%d 도착지[%d] 쓰기 성공..!", i + 1, nTrackNum + 1, nDestPos);
+			LOG_JOB(LOG_POS_CV, nLuggNum, strLog);
+
+			continue;
+		}
+		else
+		{
+			bResult = FALSE;
+
+			// 출발 시간 추가해주지 않음!
+			m_timeStart[nIndex] = NULL;
+
+			strLog.Format("BufferStartCheck%d.. CV#%d 도착지[%d] 쓰기 실패..!", i + 1, nTrackNum + 1, nDestPos);
+			LOG_ERROR(LOG_POS_CV, nLuggNum, strLog);
+
+			break;
+		}
+	}
+
+	// 6개를 다 기록 하는 것에 실패했다면... 다시 원복 한다. ????
+	if (bResult == FALSE)
+	{
+		for(int j = 0 ; j < i ; j++)			// i의 최종값만큼 
+		{
+			int nTrackNum	= nTrackNo - j;
+			int nLuggNum	= TRACK_INFO[nTrackNum].m_nLuggNum;
+			int nLuggNum2	= TRACK_INFO[nTrackNum].m_nLuggNum2;
+			int nJobType	= TRACK_INFO[nTrackNum].m_nJobType;
+			int nStartPos	= TRACK_INFO[nTrackNum].m_nStartPos;
+			int nDestPos	= TRACK_INFO[nTrackNum].m_nDestPos;
+			int nComplete	= TRACK_INFO[nTrackNum].m_nComplete;
+			int nSize		= TRACK_INFO[nTrackNum].m_nSize;
+				
+			if (WriteTrackInfo7(nTrackNum, nLuggNum, nLuggNum2, nStartPos, nDestPos, nJobType, nComplete, nSize))
+			{
+				//m_nLineCountLuggNum3 = nCurLuggNum;
+				// 출발 시간 Update => 출발시간은 보여주기 위한 부분 일것 같음!
+				m_timeStart[nIndex] = NULL;//CTime::GetCurrentTime();
+
+				strLog.Format("BufferStartCheck%d.. CV#%d 도착지[%d] 원상복구 성공..!", i + 1, nTrackNum + 1, nDestPos);
+				LOG_JOB(LOG_POS_CV, nLuggNum, strLog);
+
+				continue;
+			}
+			else
+			{
+				bResult = FALSE;
+
+				// 출발 시간 추가해주지 않음!
+				//m_timeStart[nIndex] = NULL;
+
+				strLog.Format("BufferStartCheck%d.. CV#%d 도착지[%d] 원상복구 실패..!", i + 1, nTrackNum + 1, nDestPos);
+				LOG_ERROR(LOG_POS_CV, nLuggNum, strLog);
+
+				break;
+			}
+		}
+	}
+}
 
 #undef	TRACK_INFO
 

@@ -94,6 +94,7 @@ public:
 	void RemoveCvData1Group2();
 
 	void BufferFullCheck();
+	void BufferStartCheck();
 
 	int  WriteTrackInfo(int nTrackNum, int nLuggNum, int nJobType, int nStartPos, int nDestPos, int nLastPallet = 0);
 	int  WriteTrackInfo2(int nTrackNum, int nLuggNum, int nStartPos, int nDestPos, int nJobType = 0, int nComplete=0);
