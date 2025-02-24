@@ -1,0 +1,240 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ecs - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo".\Release/Ecs.res" /d "NDEBUG" "D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Ecs.rc"" 
+Creating temporary file "C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSP6DDB.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR".\Release/" /Fp".\Release/Ecs.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ChangePasswordDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ColorViewDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\CommonDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Config.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ConfigDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\control.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Conveyor.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ConveyorDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ConveyorTrackInfo.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\CvLineDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\CvSocket.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\CvThread.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Ecs.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\EcsDoc.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\EcsSockClient.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\EcsView.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\font.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Host.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Job.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\JobDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\JobItemDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Lib.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\log.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\LogDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\LogoDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\MainFrm.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ManualDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Melsec.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Melsec3E.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\MoveJob.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\MoveJobDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\MoveJobItemDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\mschart1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\OpBoxDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\PasswordDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\PlcMelsec.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\RedirectionDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ResetOrderDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Rgv.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\RgvDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\RgvInfo.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\RgvManualDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\RgvThreadProc.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ScCheckDelDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ScErrDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ScInhibitDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ScQ.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ScQThreadProc.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ScSocket.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ScThread.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Serial.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StackerInfo.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StackerTwin.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StackerTwinDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\Statistic.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StatisticAvailDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StatisticBarChartDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StatisticErrCodeDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StatisticThroughputDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\ToolTipWnd.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\vcaxis1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\vcaxistitle1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\vcplot1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\vctitle1.cpp"
+]
+Creating command line "cl.exe @C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSP6DDB.tmp" 
+Creating temporary file "C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSP6DDC.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR".\Release/" /Fp".\Release/Ecs.pch" /Yc"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs - 복사본\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSP6DDC.tmp" 
+Creating temporary file "C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSP6DDD.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"..\Bin/Ecs.pdb" /machine:I386 /out:"..\Bin/Ecs.exe" 
+".\Release\ChangePasswordDlg.obj"
+".\Release\ColorViewDlg.obj"
+".\Release\CommonDlg.obj"
+".\Release\Config.obj"
+".\Release\ConfigDlg.obj"
+".\Release\control.obj"
+".\Release\Conveyor.obj"
+".\Release\ConveyorDlg.obj"
+".\Release\ConveyorTrackInfo.obj"
+".\Release\CvLineDlg.obj"
+".\Release\CvSocket.obj"
+".\Release\CvThread.obj"
+".\Release\Ecs.obj"
+".\Release\EcsDoc.obj"
+".\Release\EcsSockClient.obj"
+".\Release\EcsView.obj"
+".\Release\font.obj"
+".\Release\Host.obj"
+".\Release\Job.obj"
+".\Release\JobDlg.obj"
+".\Release\JobItemDlg.obj"
+".\Release\Lib.obj"
+".\Release\log.obj"
+".\Release\LogDlg.obj"
+".\Release\LogoDlg.obj"
+".\Release\MainFrm.obj"
+".\Release\ManualDlg.obj"
+".\Release\Melsec.obj"
+".\Release\Melsec3E.obj"
+".\Release\MoveJob.obj"
+".\Release\MoveJobDlg.obj"
+".\Release\MoveJobItemDlg.obj"
+".\Release\mschart1.obj"
+".\Release\OpBoxDlg.obj"
+".\Release\PasswordDlg.obj"
+".\Release\PlcMelsec.obj"
+".\Release\RedirectionDlg.obj"
+".\Release\ResetOrderDlg.obj"
+".\Release\Rgv.obj"
+".\Release\RgvDlg.obj"
+".\Release\RgvInfo.obj"
+".\Release\RgvManualDlg.obj"
+".\Release\RgvThreadProc.obj"
+".\Release\ScCheckDelDlg.obj"
+".\Release\ScErrDlg.obj"
+".\Release\ScInhibitDlg.obj"
+".\Release\ScQ.obj"
+".\Release\ScQThreadProc.obj"
+".\Release\ScSocket.obj"
+".\Release\ScThread.obj"
+".\Release\Serial.obj"
+".\Release\StackerInfo.obj"
+".\Release\StackerTwin.obj"
+".\Release\StackerTwinDlg.obj"
+".\Release\Statistic.obj"
+".\Release\StatisticAvailDlg.obj"
+".\Release\StatisticBarChartDlg.obj"
+".\Release\StatisticErrCodeDlg.obj"
+".\Release\StatisticThroughputDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\ToolTipWnd.obj"
+".\Release\vcaxis1.obj"
+".\Release\vcaxistitle1.obj"
+".\Release\vcplot1.obj"
+".\Release\vctitle1.obj"
+".\Release\Ecs.res"
+]
+Creating command line "link.exe @C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSP6DDD.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChangePasswordDlg.cpp
+ColorViewDlg.cpp
+CommonDlg.cpp
+Config.cpp
+ConfigDlg.cpp
+control.cpp
+Conveyor.cpp
+ConveyorDlg.cpp
+ConveyorTrackInfo.cpp
+CvLineDlg.cpp
+CvSocket.cpp
+CvThread.cpp
+Ecs.cpp
+EcsDoc.cpp
+EcsSockClient.cpp
+EcsView.cpp
+font.cpp
+Host.cpp
+Job.cpp
+JobDlg.cpp
+Generating Code...
+Compiling...
+JobItemDlg.cpp
+Lib.cpp
+log.cpp
+LogDlg.cpp
+LogoDlg.cpp
+MainFrm.cpp
+ManualDlg.cpp
+Melsec.cpp
+Melsec3E.cpp
+MoveJob.cpp
+MoveJobDlg.cpp
+MoveJobItemDlg.cpp
+mschart1.cpp
+OpBoxDlg.cpp
+PasswordDlg.cpp
+PlcMelsec.cpp
+RedirectionDlg.cpp
+ResetOrderDlg.cpp
+Rgv.cpp
+RgvDlg.cpp
+Generating Code...
+Compiling...
+RgvInfo.cpp
+RgvManualDlg.cpp
+RgvThreadProc.cpp
+ScCheckDelDlg.cpp
+ScErrDlg.cpp
+ScInhibitDlg.cpp
+ScQ.cpp
+ScQThreadProc.cpp
+ScSocket.cpp
+ScThread.cpp
+Serial.cpp
+StackerInfo.cpp
+StackerTwin.cpp
+StackerTwinDlg.cpp
+Statistic.cpp
+StatisticAvailDlg.cpp
+StatisticBarChartDlg.cpp
+StatisticErrCodeDlg.cpp
+StatisticThroughputDlg.cpp
+ToolTipWnd.cpp
+Generating Code...
+Compiling...
+vcaxis1.cpp
+vcaxistitle1.cpp
+vcplot1.cpp
+vctitle1.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Ecs.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

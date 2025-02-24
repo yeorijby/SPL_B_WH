@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ecs - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\DONGHY~1.KIM\AppData\Local\Temp\RSP5006.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR".\Release/" /Fp".\Release/Ecs.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"D:\PROJECT\SPL\프로그램\Ecs\Ecs\EcsView.cpp"
+]
+Creating command line "cl.exe @C:\Users\DONGHY~1.KIM\AppData\Local\Temp\RSP5006.tmp" 
+Creating temporary file "C:\Users\DONGHY~1.KIM\AppData\Local\Temp\RSP5007.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"..\Bin/Ecs.pdb" /machine:I386 /out:"..\Bin/Ecs.exe" 
+".\Release\ChangePasswordDlg.obj"
+".\Release\ColorViewDlg.obj"
+".\Release\CommonDlg.obj"
+".\Release\Config.obj"
+".\Release\ConfigDlg.obj"
+".\Release\control.obj"
+".\Release\Conveyor.obj"
+".\Release\ConveyorDlg.obj"
+".\Release\ConveyorTrackInfo.obj"
+".\Release\CvLineDlg.obj"
+".\Release\CvSocket.obj"
+".\Release\CvThread.obj"
+".\Release\Ecs.obj"
+".\Release\EcsDoc.obj"
+".\Release\EcsSockClient.obj"
+".\Release\EcsView.obj"
+".\Release\font.obj"
+".\Release\Host.obj"
+".\Release\Job.obj"
+".\Release\JobDlg.obj"
+".\Release\JobItemDlg.obj"
+".\Release\Lib.obj"
+".\Release\log.obj"
+".\Release\LogDlg.obj"
+".\Release\LogoDlg.obj"
+".\Release\MainFrm.obj"
+".\Release\ManualDlg.obj"
+".\Release\Melsec.obj"
+".\Release\Melsec3E.obj"
+".\Release\MoveJob.obj"
+".\Release\MoveJobDlg.obj"
+".\Release\MoveJobItemDlg.obj"
+".\Release\mschart1.obj"
+".\Release\OpBoxDlg.obj"
+".\Release\PasswordDlg.obj"
+".\Release\PlcMelsec.obj"
+".\Release\RedirectionDlg.obj"
+".\Release\ResetOrderDlg.obj"
+".\Release\Rgv.obj"
+".\Release\RgvDlg.obj"
+".\Release\RgvInfo.obj"
+".\Release\RgvManualDlg.obj"
+".\Release\RgvThreadProc.obj"
+".\Release\ScCheckDelDlg.obj"
+".\Release\ScErrDlg.obj"
+".\Release\ScInhibitDlg.obj"
+".\Release\ScQ.obj"
+".\Release\ScQThreadProc.obj"
+".\Release\ScSocket.obj"
+".\Release\ScThread.obj"
+".\Release\Serial.obj"
+".\Release\StackerInfo.obj"
+".\Release\StackerTwin.obj"
+".\Release\StackerTwinDlg.obj"
+".\Release\Statistic.obj"
+".\Release\StatisticAvailDlg.obj"
+".\Release\StatisticBarChartDlg.obj"
+".\Release\StatisticErrCodeDlg.obj"
+".\Release\StatisticThroughputDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\ToolTipWnd.obj"
+".\Release\vcaxis1.obj"
+".\Release\vcaxistitle1.obj"
+".\Release\vcplot1.obj"
+".\Release\vctitle1.obj"
+".\Release\Ecs.res"
+]
+Creating command line "link.exe @C:\Users\DONGHY~1.KIM\AppData\Local\Temp\RSP5007.tmp"
+<h3>Output Window</h3>
+Compiling...
+EcsView.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Ecs.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ecs - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo".\Release/Ecs.res" /d "NDEBUG" "D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Ecs.rc"" 
+Creating temporary file "C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSPEE97.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR".\Release/" /Fp".\Release/Ecs.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ChangePasswordDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ColorViewDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\CommonDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Config.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConfigDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\control.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorTrackInfo.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\CvLineDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\CvSocket.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\CvThread.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Ecs.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\EcsDoc.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\EcsSockClient.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\EcsView.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\font.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobItemDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\log.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogoDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MainFrm.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ManualDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Melsec.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Melsec3E.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobItemDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\mschart1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\OpBoxDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\PasswordDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\PlcMelsec.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\RedirectionDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ResetOrderDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\RgvDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\RgvInfo.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\RgvManualDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\RgvThreadProc.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScCheckDelDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScErrDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScInhibitDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQThreadProc.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScSocket.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScThread.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Serial.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerInfo.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Statistic.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticAvailDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticBarChartDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticThroughputDlg.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ToolTipWnd.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\vcaxis1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\vcaxistitle1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\vcplot1.cpp"
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\vctitle1.cpp"
+]
+Creating command line "cl.exe @C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSPEE97.tmp" 
+Creating temporary file "C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSPEE98.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR".\Release/" /Fp".\Release/Ecs.pch" /Yc"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSPEE98.tmp" 
+Creating temporary file "C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSPEE99.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"..\Bin/Ecs.pdb" /machine:I386 /out:"..\Bin/Ecs.exe" 
+".\Release\ChangePasswordDlg.obj"
+".\Release\ColorViewDlg.obj"
+".\Release\CommonDlg.obj"
+".\Release\Config.obj"
+".\Release\ConfigDlg.obj"
+".\Release\control.obj"
+".\Release\Conveyor.obj"
+".\Release\ConveyorDlg.obj"
+".\Release\ConveyorTrackInfo.obj"
+".\Release\CvLineDlg.obj"
+".\Release\CvSocket.obj"
+".\Release\CvThread.obj"
+".\Release\Ecs.obj"
+".\Release\EcsDoc.obj"
+".\Release\EcsSockClient.obj"
+".\Release\EcsView.obj"
+".\Release\font.obj"
+".\Release\Host.obj"
+".\Release\Job.obj"
+".\Release\JobDlg.obj"
+".\Release\JobItemDlg.obj"
+".\Release\Lib.obj"
+".\Release\log.obj"
+".\Release\LogDlg.obj"
+".\Release\LogoDlg.obj"
+".\Release\MainFrm.obj"
+".\Release\ManualDlg.obj"
+".\Release\Melsec.obj"
+".\Release\Melsec3E.obj"
+".\Release\MoveJob.obj"
+".\Release\MoveJobDlg.obj"
+".\Release\MoveJobItemDlg.obj"
+".\Release\mschart1.obj"
+".\Release\OpBoxDlg.obj"
+".\Release\PasswordDlg.obj"
+".\Release\PlcMelsec.obj"
+".\Release\RedirectionDlg.obj"
+".\Release\ResetOrderDlg.obj"
+".\Release\Rgv.obj"
+".\Release\RgvDlg.obj"
+".\Release\RgvInfo.obj"
+".\Release\RgvManualDlg.obj"
+".\Release\RgvThreadProc.obj"
+".\Release\ScCheckDelDlg.obj"
+".\Release\ScErrDlg.obj"
+".\Release\ScInhibitDlg.obj"
+".\Release\ScQ.obj"
+".\Release\ScQThreadProc.obj"
+".\Release\ScSocket.obj"
+".\Release\ScThread.obj"
+".\Release\Serial.obj"
+".\Release\StackerInfo.obj"
+".\Release\StackerTwin.obj"
+".\Release\StackerTwinDlg.obj"
+".\Release\Statistic.obj"
+".\Release\StatisticAvailDlg.obj"
+".\Release\StatisticBarChartDlg.obj"
+".\Release\StatisticErrCodeDlg.obj"
+".\Release\StatisticThroughputDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\ToolTipWnd.obj"
+".\Release\vcaxis1.obj"
+".\Release\vcaxistitle1.obj"
+".\Release\vcplot1.obj"
+".\Release\vctitle1.obj"
+".\Release\Ecs.res"
+]
+Creating command line "link.exe @C:\Users\JUNGMI~1.LEE\AppData\Local\Temp\RSPEE99.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChangePasswordDlg.cpp
+ColorViewDlg.cpp
+CommonDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\CommonDlg.cpp(84) : error C2065: 'ID_WRAPING_TIMER' : undeclared identifier
+Config.cpp
+ConfigDlg.cpp
+control.cpp
+Conveyor.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(1220) : error C2065: 'MOVEJOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(1220) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(1223) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(1231) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2523) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2582) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2585) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2610) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2613) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2633) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2659) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2662) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2672) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2675) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2699) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2722) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2731) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2753) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2816) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2843) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2867) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2892) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(2905) : error C2227: left of '->Remove' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3161) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3163) : error C2065: 'JOB_STA_MOVE_CV_PALLET_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3185) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3450) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3494) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3503) : error C2065: 'JOB_STA_MOVE_CV_BUFFER_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3513) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3532) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3551) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3570) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3589) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3608) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3627) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3646) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3665) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3684) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3703) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3722) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3741) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3807) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3871) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3888) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3907) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3926) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3945) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3964) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(3983) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4002) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4021) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4040) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4059) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4078) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4097) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4116) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4135) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4201) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4265) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4282) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4301) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4320) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4339) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4358) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4377) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4396) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4415) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4434) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4453) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4472) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4491) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4510) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4529) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4560) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4619) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4636) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4655) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4674) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4693) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4712) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4731) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4750) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4769) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4788) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4807) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4826) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4845) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4864) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4883) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(4914) : error C2227: left of '->BufferLineLastCheck' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(5086) : error C2065: 'JOB_STA_CV_MOVE_RET_STATION' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(5331) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(5348) : error C2227: left of '->Add' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(5349) : error C2065: 'JOB_STA_MOVE_CV_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(6508) : error C2227: left of '->FetchCvJobByStationNum' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(6508) : error C2065: 'JOB_STA_MOVE_CV_OPER_REQUEST' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(6533) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(6559) : error C2227: left of '->FetchCvJobByStationNum' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(6586) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(6615) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Conveyor.cpp(6615) : fatal error C1003: error count exceeds 100; stopping compilation
+ConveyorDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(535) : error C2065: 'JOB_STA_MOVE_RGV_OPER_REQUEST' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(538) : error C2065: 'JOB_STA_MOVE_CV_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1079) : error C2065: 'MOVEJOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1079) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1099) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1102) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1113) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1116) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1127) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1130) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1141) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1144) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1155) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1158) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1169) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1172) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1183) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1186) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1197) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1200) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1211) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1214) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1225) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1228) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1239) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1242) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1292) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1296) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1302) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1306) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1311) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1315) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1320) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1324) : error C2227: left of '->FindChange' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1541) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ConveyorDlg.cpp(1598) : error C2227: left of '->Find' must point to class/struct/union
+ConveyorTrackInfo.cpp
+CvLineDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\CvLineDlg.cpp(69) : error C2065: 'ID_WRAPING_TIMER' : undeclared identifier
+CvSocket.cpp
+CvThread.cpp
+Ecs.cpp
+EcsDoc.cpp
+EcsSockClient.cpp
+EcsView.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\EcsView.cpp(2452) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\EcsView.cpp(2453) : error C2065: 'SC_MODE_REMOTE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\EcsView.cpp(2454) : error C2065: 'SC_STA_MANUAL' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\EcsView.cpp(2464) : error C2065: 'SC_PROD_LOAD' : undeclared identifier
+font.cpp
+Host.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(426) : error C2065: 'MOVEJOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(426) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(439) : error C2227: left of '->Add' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(649) : error C2065: 'CMD_REQ_START' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(649) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(753) : error C2065: 'SC_MODE_AUTO' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(774) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(1123) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(1153) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(1160) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(1195) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(1747) : error C2065: 'JOB_STA_ERR_REPORT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(1771) : error C2065: 'CMD_BCRJOB_ANSWER' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Host.cpp(1771) : error C2051: case expression not constant
+Job.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(596) : error C2065: 'JOB_STA_ERR_REPORT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(596) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(598) : error C2065: 'JOB_STA_CV_MOVE_RET_STATION' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(598) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(619) : error C2065: 'TURN_NONE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(619) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(621) : error C2065: 'TURN_LEFT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(621) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(623) : error C2065: 'TURN_RIGHT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Job.cpp(623) : error C2051: case expression not constant
+JobDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(683) : error C2065: 'SORT_PARAMS' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(683) : error C2065: 'pSortParams' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(683) : error C2059: syntax error : ')'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(685) : error C2227: left of '->hWnd' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(686) : error C2227: left of '->bAscend' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(687) : error C2227: left of '->nCol' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(713) : error C2146: syntax error : missing ';' before identifier 'sort_params'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(713) : error C2065: 'sort_params' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(714) : error C2228: left of '.hWnd' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(715) : error C2228: left of '.nCol' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\JobDlg.cpp(716) : error C2228: left of '.bAscend' must have class/struct/union type
+Generating Code...
+Compiling...
+JobItemDlg.cpp
+Lib.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(904) : error C2065: 'STO_JOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(906) : error C2065: 'RET_JOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(908) : error C2065: 'SRET_JOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1213) : error C2065: 'SC_MODE_REMOTE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1213) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1215) : error C2065: 'SC_MODE_ONLINE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1215) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1217) : error C2065: 'SC_MODE_OFFLINE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1217) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1223) : warning C4065: switch statement contains 'default' but no 'case' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1251) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1253) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1255) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1261) : warning C4065: switch statement contains 'default' but no 'case' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1268) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1270) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1272) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1274) : warning C4060: switch statement contains no 'case' or 'default' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1285) : error C2065: 'SC_MODE_REMOTE_NEW' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1285) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1287) : error C2065: 'SC_MODE_ONLINE_NEW' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1287) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1289) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1291) : warning C4060: switch statement contains no 'case' or 'default' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1302) : error C2065: 'SC_MODE_AUTO' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1302) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1304) : error C2065: 'SC_MODE_MANUAL_NEW' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1304) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1305) : error C2065: 'SC_MODE_MANUAL' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1305) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1307) : warning C4060: switch statement contains no 'case' or 'default' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1333) : error C2065: 'SC_STA_WAIT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1333) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1335) : error C2065: 'SC_STA_IDLE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1335) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1337) : error C2065: 'SC_STA_MOVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1337) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1339) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1339) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1345) : warning C4065: switch statement contains 'default' but no 'case' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1551) : error C2065: 'SC_ERR_CODE_COMM_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1551) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Lib.cpp(1693) : error C2051: case expression not constant
+log.cpp
+LogDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(641) : error C2065: 'SORT_PARAMS' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(641) : error C2065: 'pSortParams' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(641) : error C2059: syntax error : ')'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(643) : error C2227: left of '->hWnd' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(644) : error C2227: left of '->bAscend' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(645) : error C2227: left of '->nCol' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(671) : error C2146: syntax error : missing ';' before identifier 'sort_params'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(671) : error C2065: 'sort_params' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(672) : error C2228: left of '.hWnd' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(673) : error C2228: left of '.nCol' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\LogDlg.cpp(674) : error C2228: left of '.bAscend' must have class/struct/union type
+LogoDlg.cpp
+MainFrm.cpp
+ManualDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ManualDlg.cpp(74) : error C2065: 'CMD_BYPASS' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ManualDlg.cpp(137) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ManualDlg.cpp(282) : error C2051: case expression not constant
+Melsec.cpp
+Melsec3E.cpp
+MoveJob.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(422) : error C2065: 'JOB_STA_MOVE_ALL' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(422) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(424) : error C2065: 'JOB_STA_MOVE_NEW' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(424) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(426) : error C2065: 'JOB_STA_MOVE_CV_NEW' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(426) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(428) : error C2065: 'JOB_STA_MOVE_ERR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(428) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(432) : error C2065: 'JOB_STA_MOVE_CV_OPER_REQUEST' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(432) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(434) : error C2065: 'JOB_STA_MOVE_CV_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(434) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(436) : error C2065: 'JOB_STA_MOVE_CV_BUFFER_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(436) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(438) : error C2065: 'JOB_STA_MOVE_CV_PALLET_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(438) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(441) : error C2065: 'JOB_STA_MOVE_RGV_OPER_REQUEST' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(441) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(443) : error C2065: 'JOB_STA_MOVE_RGV_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(443) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(445) : error C2065: 'JOB_STA_MOVE_RGV_OPER_COMPLETE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(445) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(449) : error C2065: 'JOB_STA_MOVE_COMPLETE_REQUEST' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(449) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(451) : error C2065: 'JOB_STA_MOVE_COMPLETE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(451) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(456) : error C2065: 'JOB_STA_MOVE_REFUSE_COMPLETE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(456) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(458) : error C2065: 'JOB_STA_MOVE_REFUSE_ARRIVED' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(458) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(460) : error C2065: 'JOB_STA_MOVE_REFUSE_CANCEL' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(460) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(463) : error C2065: 'JOB_STA_MOVE_REFUSE_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(463) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(472) : warning C4065: switch statement contains 'default' but no 'case' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(486) : error C2065: 'TURN_NONE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(486) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(488) : error C2065: 'TURN_LEFT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(488) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(490) : error C2065: 'TURN_RIGHT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJob.cpp(490) : error C2051: case expression not constant
+MoveJobDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(450) : error C2065: 'CMD_ARRIVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(862) : error C2065: 'SORT_PARAMS' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(862) : error C2065: 'pSortParams' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(862) : error C2059: syntax error : ')'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(864) : error C2227: left of '->hWnd' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(865) : error C2227: left of '->bAscend' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(866) : error C2227: left of '->nCol' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(892) : error C2146: syntax error : missing ';' before identifier 'sort_params'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(892) : error C2065: 'sort_params' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(893) : error C2228: left of '.hWnd' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(894) : error C2228: left of '.nCol' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobDlg.cpp(895) : error C2228: left of '.bAscend' must have class/struct/union type
+MoveJobItemDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobItemDlg.cpp(89) : error C2065: 'JOB_STA_MOVE_CNT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobItemDlg.cpp(202) : error C2065: 'CMD_ARRIVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\MoveJobItemDlg.cpp(202) : error C2051: case expression not constant
+mschart1.cpp
+OpBoxDlg.cpp
+PasswordDlg.cpp
+PlcMelsec.cpp
+RedirectionDlg.cpp
+ResetOrderDlg.cpp
+Rgv.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(209) : error C2065: 'ROUTINE_SITE_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(209) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(227) : error C2065: 'ROUTINE_SITE_RETRIEVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(227) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(280) : error C2065: 'MOVEJOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(280) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(291) : error C2065: 'JOB_STA_MOVE_CV_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(297) : error C2227: left of '->FetchRgvJobByDestTrack' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(317) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(342) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(374) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(422) : error C2065: 'JOB_STA_MOVE_RGV_OPER_INVOKE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(423) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(482) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(528) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(554) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(589) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(652) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(662) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(707) : error C2227: left of '->FetchRgvJobByDestTrack' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(741) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(859) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(869) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(887) : error C2065: 'JOB_STA_MOVE_RGV_OPER_REQUEST' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(940) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(1000) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(1032) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(1043) : error C2065: 'JOB_STA_MOVE_RGV_OPER_COMPLETE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(1044) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(1049) : error C2227: left of '->Find' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(1057) : error C2227: left of '->Backup' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\Rgv.cpp(1298) : error C2227: left of '->Find' must point to class/struct/union
+RgvDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\RgvDlg.cpp(208) : error C2065: 'MOVEJOB' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\RgvDlg.cpp(208) : error C2227: left of '->Find' must point to class/struct/union
+Generating Code...
+Compiling...
+RgvInfo.cpp
+RgvManualDlg.cpp
+RgvThreadProc.cpp
+ScCheckDelDlg.cpp
+ScErrDlg.cpp
+ScInhibitDlg.cpp
+ScQ.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(48) : error C2065: 'SC_ERR_CODE_COMM_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(49) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(161) : error C2065: 'SC_MODE_ONLINE_NEW' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(162) : error C2065: 'SC_MODE_AUTO' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(163) : error C2065: 'SC_MODE_MANUAL_NEW' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(182) : error C2065: 'SC_STA_MOVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(361) : error C2065: 'SC_DEFAULT_HS_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(720) : error C2065: 'SC_STA_WAIT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(720) : error C2065: 'SC_STA_IDLE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(722) : error C2065: 'SC_TRN_COMPLETE_FORK1' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(723) : error C2065: 'SC_TRN_COMPLETE_FORK2' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(724) : error C2065: 'SC_TRN_COMPLETE_FORK12' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(854) : error C2065: 'SC_ERR_CODE_DUAL_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(914) : error C2065: 'SC_ERR_CODE_DUAL_SECOND_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1019) : error C2065: 'SC_ERR_CODE_EMPTY_RETRIEVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1019) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1044) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1068) : warning C4065: switch statement contains 'default' but no 'case' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1085) : error C2065: 'SC_ERR_CODE_EMPTY_SECOND_RETRIEVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1085) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1110) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQ.cpp(1136) : warning C4065: switch statement contains 'default' but no 'case' labels
+ScQThreadProc.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScQThreadProc.cpp(41) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+ScSocket.cpp
+ScThread.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\ScThread.cpp(68) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+Serial.cpp
+StackerInfo.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerInfo.cpp(41) : error C2065: 'SC_MODE_REMOTE' : undeclared identifier
+StackerTwin.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(350) : error C2065: 'SC_ERR_CODE_COMM_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(351) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(472) : error C2065: 'SC_MODE_REMOTE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(473) : error C2065: 'SC_MODE_AUTO' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(474) : error C2065: 'SC_MODE_MANUAL' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(612) : error C2065: 'SC_STA_WAIT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(612) : error C2065: 'SC_STA_IDLE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(614) : error C2065: 'SC_TRN_COMPLETE_FORK1' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(615) : error C2065: 'SC_TRN_COMPLETE_FORK2' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(616) : error C2065: 'SC_TRN_COMPLETE_FORK12' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(742) : error C2065: 'SC_STA_MOVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(794) : error C2065: 'SC_ERR_CODE_DUAL_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(854) : error C2065: 'SC_ERR_CODE_DUAL_SECOND_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1011) : error C2065: 'SC_DEFAULT_HS_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1459) : error C2065: 'SC_ERR_CODE_EMPTY_RETRIEVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1459) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1484) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1508) : warning C4065: switch statement contains 'default' but no 'case' labels
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1525) : error C2065: 'SC_ERR_CODE_EMPTY_SECOND_RETRIEVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1525) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1550) : error C2051: case expression not constant
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwin.cpp(1576) : warning C4065: switch statement contains 'default' but no 'case' labels
+StackerTwinDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp(134) : error C2065: 'SC_STA_ERROR' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp(250) : error C2065: 'SC_MODE_AUTO' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp(257) : error C2065: 'SC_STA_WAIT' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp(257) : error C2065: 'SC_STA_IDLE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp(262) : error C2065: 'SC_STA_MOVE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp(373) : error C2065: 'SC_ERR_CODE_DUAL_STORE' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StackerTwinDlg.cpp(374) : error C2065: 'SC_ERR_CODE_DUAL_SECOND_STORE' : undeclared identifier
+Statistic.cpp
+StatisticAvailDlg.cpp
+StatisticBarChartDlg.cpp
+StatisticErrCodeDlg.cpp
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(584) : error C2065: 'SORT_PARAMS' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(584) : error C2065: 'pSortParams' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(584) : error C2059: syntax error : ')'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(586) : error C2227: left of '->hWnd' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(587) : error C2227: left of '->bAscend' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(588) : error C2227: left of '->nCol' must point to class/struct/union
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(614) : error C2146: syntax error : missing ';' before identifier 'sort_params'
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(614) : error C2065: 'sort_params' : undeclared identifier
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(615) : error C2228: left of '.hWnd' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(616) : error C2228: left of '.nCol' must have class/struct/union type
+D:\Project\SPL\1공장\프로그램\Ecs\Ecs\StatisticErrCodeDlg.cpp(617) : error C2228: left of '.bAscend' must have class/struct/union type
+StatisticThroughputDlg.cpp
+ToolTipWnd.cpp
+Generating Code...
+Compiling...
+vcaxis1.cpp
+vcaxistitle1.cpp
+vcplot1.cpp
+vctitle1.cpp
+Generating Code...
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+Ecs.exe - 380 error(s), 11 warning(s)
+</pre>
+</body>
+</html>

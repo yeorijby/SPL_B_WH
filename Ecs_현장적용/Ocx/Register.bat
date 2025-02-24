@@ -1,0 +1,9 @@
+regsvr32 /s Stacker.ocx
+regsvr32 /s Conveyor.ocx
+regsvr32 /s Rack.ocx
+regsvr32 /s Opbox.ocx
+regsvr32 /s EcsGraph.ocx
+regsvr32 /s MsChrt20.ocx
+regsvr32 /s Cv.ocx
+regsvr32 /s GmsBtn.ocx
+regsvr32 /s Sc.ocx

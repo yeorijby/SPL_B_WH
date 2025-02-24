@@ -1,0 +1,4 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by Ecs.rc
+//
+#define HIDC_CHECK_HOST_NOTIFY          0x80850400    // IDD_MANUAL
