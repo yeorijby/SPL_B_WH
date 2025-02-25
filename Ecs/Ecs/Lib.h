@@ -59,6 +59,7 @@ public:
 	
 	static BOOL IsSet(BYTE Byte, int nPos);
 	static BOOL IsSet(WORD Word, int nPos);
+	static void SetBit(WORD& wValue, int nPos, BOOL bSet);
 	static int Power(int x, int y);
 	static int HexToInt(BYTE bHex);
 	static void ConvertAscToHex(char* pOrg, char* pDest);

@@ -95,6 +95,7 @@ public:
 
 	void BufferFullCheck();
 	void BufferStartCheck();
+	void BufferEmtpyCheck();
 
 	int  WriteTrackInfo(int nTrackNum, int nLuggNum, int nJobType, int nStartPos, int nDestPos, int nLastPallet = 0);
 	int  WriteTrackInfo2(int nTrackNum, int nLuggNum, int nStartPos, int nDestPos, int nJobType = 0, int nComplete=0);
@@ -104,6 +105,7 @@ public:
     int  WriteTroubleInfo(int nAddressNum, WORD wAddressData);
 	int  WritePlcCountInfo(int nTrackNum, int nPlcCount);
 	int  WriteLineGroupInfo(int nD1=0, int nD2=0, int nD3=0, int nD4=0, int nD5=0, int nD6=0, int nD7=0, int nD8=0, int nD9=0, int nD10=0, int nD11=0, int nD12=0, int nD13=0, int nD14=0);
+	int  WriteStatusBit(int nTrackNo, int nIndex, BOOL bSet = TRUE);
 
 	void StoInvokeCheck();
 	void StoInvokeCheck2();

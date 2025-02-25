@@ -7492,23 +7492,33 @@ void CConveyor::BufferEmtpyCheck()
 		if (m_pDoc->m_bBufferSuspend[i] == TRUE)
 			continue;
 
-		int nTempTemp = nTemp + (i * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
+		int nDelegateTR = nTemp + (i * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
 
+		BOOL bLastPLT = FALSE;
 		int nTempTempTemp = 0;
 		for (int j = 0 ; j < BUFFER_CNT ; j++)		// 6
 		{
-			int nTrackNo = nTempTemp - nTempTempTemp++;
+			int nTrackNo = nDelegateTR - nTempTempTemp++;
 			if (TRACK_INFO[nTrackNo].m_nLuggNum == 0 ||
 				TRACK_INFO[nTrackNo].m_bPltSensor == FALSE) 
 				continue;
 			
+//			// 마지막 파레트 일경우는 무조건 나감?????
+//			if (TRACK_INFO[nTrackNo].m_nComplete == TRUE)
+//			{
+//				bLastPLT = FALSE;
+//				break;
+//			}
+
 			++nCount;		// Count 추가 
 		}
 
+		//if (nCount == BUFFER_CNT || bLastPLT == TRUE)
 		if (nCount == BUFFER_CNT)
 		{			
 			// 비트세팅			// Ready 시간 세팅 - 비트 세팅이 성공했을 때 
-			
+			WriteStatusBit(nDelegateTR, 4, FALSE);		// Excel 파일에서  4번째 비트를 하기로 했음 !
+			m_pDoc->m_timeFullReady[i] = NULL;
 		}
 	}
 }
@@ -7528,28 +7538,38 @@ void CConveyor::BufferFullCheck()
 //		if (비트 == TRUE)
 //			continue;
 
-		int nTempTemp = nTemp + (i * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
+		int nDelegateTR = nTemp + (i * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
 
 		// 맨앞의 목적지 값을 가져와야 하리라. 
-		int nDestPos = TRACK_INFO[nTempTemp].m_nDestPos;
+		int nDestPos = TRACK_INFO[nDelegateTR].m_nDestPos;
 
+		BOOL bLastPLT = FALSE;
 		int nTempTempTemp = 0;
 		for (int j = 0 ; j < BUFFER_CNT ; j++)		// 6
 		{
-			int nTrackNo = nTempTemp - nTempTempTemp++;
+			int nTrackNo = nDelegateTR - nTempTempTemp++;
 			if (TRACK_INFO[nTrackNo].m_nLuggNum == 0 ||
 				TRACK_INFO[nTrackNo].m_bPltSensor == FALSE) 
 				continue;
-			
+
+			// 마지막 파레트 일경우는 무조건 나감!
+			if (TRACK_INFO[nTrackNo].m_nComplete == TRUE)
+			{
+				bLastPLT = FALSE;
+				break;
+			}
+
 			// 맨 앞의 목적지 값과 같으면 카운트를 추가한다. 
 			if (TRACK_INFO[nTrackNo].m_nDestPos == nDestPos)
 				++nCount;		// Count 추가 
+
 		}
 
-		if (nCount == BUFFER_CNT)
+		if (nCount == BUFFER_CNT || bLastPLT == TRUE)
 		{			
-			// 비트세팅			// Ready 시간 세팅 - 비트 세팅이 성공했을 때 
-			
+			// 비트세팅			// Ready 시간 세팅 - 비트 세팅이 성공했을 때
+			WriteStatusBit(nDelegateTR, 4, TRUE);		// Excel 파일에서  4번째 비트를 하기로 했음 !
+			m_pDoc->m_timeFullReady[i] = CTime::GetCurrentTime();
 		}
 	}
 }
@@ -7568,15 +7588,15 @@ void CConveyor::BufferStartCheck()
 			continue;
 
 		// 준비가 되지 않았으면 체크하지 않는다. 
-		if (m_timeFullReady[i] == NULL)
+		if (m_pDoc->m_timeFullReady[i] == NULL)
 			continue;
 
 		// 준비 시간과 출발 시간이 같으면 체크하지 않는다. - 이런 경우는 없을걸... 
-		if (m_timeFullReady[i] == m_timeStart[i])
+		if (m_pDoc->m_timeFullReady[i] == m_pDoc->m_timeStart[i])
 			continue;
 
 		// 가장 빨리 세팅되었던 버퍼 준비 시간의 인덱스를  가져온다. - 우선순위 
-		if (time <= m_timeFullReady[i])
+		if (time <= m_pDoc->m_timeFullReady[i])
 			nIndex = i;
 	}
 
@@ -7603,7 +7623,7 @@ void CConveyor::BufferStartCheck()
 		{
 			//m_nLineCountLuggNum3 = nCurLuggNum;
 			// 출발 시간 Update => 출발시간은 보여주기 위한 부분 일것 같음!
-			m_timeStart[nIndex] = CTime::GetCurrentTime();
+			m_pDoc->m_timeStart[nIndex] = CTime::GetCurrentTime();
 
 			strLog.Format("BufferStartCheck%d.. CV#%d 도착지[%d] 쓰기 성공..!", i + 1, nTrackNum + 1, nDestPos);
 			LOG_JOB(LOG_POS_CV, nLuggNum, strLog);
@@ -7615,7 +7635,7 @@ void CConveyor::BufferStartCheck()
 			bResult = FALSE;
 
 			// 출발 시간 추가해주지 않음!
-			m_timeStart[nIndex] = NULL;
+			m_pDoc->m_timeStart[nIndex] = NULL;
 
 			strLog.Format("BufferStartCheck%d.. CV#%d 도착지[%d] 쓰기 실패..!", i + 1, nTrackNum + 1, nDestPos);
 			LOG_ERROR(LOG_POS_CV, nLuggNum, strLog);
@@ -7642,7 +7662,7 @@ void CConveyor::BufferStartCheck()
 			{
 				//m_nLineCountLuggNum3 = nCurLuggNum;
 				// 출발 시간 Update => 출발시간은 보여주기 위한 부분 일것 같음!
-				m_timeStart[nIndex] = NULL;//CTime::GetCurrentTime();
+				m_pDoc->m_timeStart[nIndex] = NULL;//CTime::GetCurrentTime();
 
 				strLog.Format("BufferStartCheck%d.. CV#%d 도착지[%d] 원상복구 성공..!", i + 1, nTrackNum + 1, nDestPos);
 				LOG_JOB(LOG_POS_CV, nLuggNum, strLog);
@@ -7900,4 +7920,48 @@ int CConveyor::WritePlcCountInfo(int nTrackNum, int nPlcCount)
 	}
 
 	return Write(CMD_WORD_UNIT, TxBuff, DEVICE_CODE_D,  nStartAddr, 1);	
+}
+
+int  CConveyor::WriteStatusBit(int nTrackNo, int nIndex, BOOL bSet)
+{
+	BYTE	TxBuff[256];
+	memset(TxBuff, 0x00, sizeof(TxBuff));
+
+	BOOL bTemp1 = m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_bPickingStationReady;
+	BOOL bTemp2 = m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_bPickingStationReady;
+	BOOL bTemp3 = m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_bStoStationReady;
+	BOOL bTemp4 = m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_bRetStationReady;
+	BOOL bTemp5 = m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_bStoHomeStandReady;
+	BOOL bTemp6 = m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_bOpMode;
+
+					// 1,		2,		3,		4,		5,		6,		7,		8,		9,	10,		11,		12,	13,		14,		15,		16
+	BOOL bTemp[16] = {bTemp1, bTemp2, bTemp3, bTemp4, bTemp5, bTemp6, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE};
+
+	int i = 0;
+	WORD wStatus = 0x0000;
+	// 현재의 상태값을 가져온다. 
+	for (i = 0 ; i < 16 ; i++)
+	{
+		CLib::SetBit(wStatus, i, bTemp[i]);
+	}
+
+	// 특정 인덱스의 값만 bSet 시킨다. 
+	for (i = 0 ; i < 16 ; i++)
+	{
+		if (i == nIndex)
+			CLib::SetBit(wStatus, i, bSet);
+	}
+
+	TxBuff[0] = (BYTE)(wStatus & 0x00FF);
+	TxBuff[1] = (BYTE)(wStatus & 0xFF00) >> 8;
+
+	int nStartAddr = 0;//((nTrackNum+1-700) * 10);
+
+//	if(	nTrackNum >= 2000)
+//		nStartAddr = ((nTrackNum+1-2000) * 10);
+//
+//	if(	nTrackNum >= 2100)
+		nStartAddr = ((nTrackNo+1-2100) * 10) + 7;
+
+	return Write(CMD_WORD_UNIT, TxBuff, DEVICE_CODE_D,  nStartAddr, 1);
 }

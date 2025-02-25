@@ -158,11 +158,13 @@ CEcsDoc::CEcsDoc()
 	//CTime m_timeFullReady[14];
 	//CTime m_timeStart[14];
 	//BOOL  m_bBufferSuspend[14];
+	//BOOL  m_bBufferReady[14];
 	for ( i = 0; i < 14; i++)
 	{
 		m_timeFullReady[i] = NULL;
 		m_timeStart[i] = NULL;
 		m_bBufferSuspend[i] = FALSE;
+		m_bBufferReady[i] = FALSE;
 	}
 	
 

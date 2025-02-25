@@ -558,6 +558,14 @@ BOOL CLib::IsSet(WORD Word, int nPos)
     return ((Word & BitFormat) == BitFormat) ? TRUE : FALSE;
 }
 
+void CLib::SetBit(WORD& wValue, int nPos, BOOL bSet)
+{
+//	DEBUGER_ASSERT_RANGE(nPos, 16);
+    WORD BitFormat = (WORD)Power(2, nPos);
+	if (bSet) wValue |= BitFormat;
+	else wValue &= ~BitFormat;
+}
+
 int CLib::Power(int x, int y)
 {
     int     i, z = x;
