@@ -374,6 +374,33 @@ void CEcsView::OnTimer(UINT nIDEvent)
 		pStacking2->SetEnabledBtnColor(pDoc->m_bWriteStackingCheck2 ? CYAN : YELLOW);
 	}
 */
+    //////////////////////////////////
+	int i = 0;
+	CCvControl* pBufferController = NULL;	//(CCvControl*)GetDlgItem(IDC_CVCTRLGOING1);
+	for (i = 0 ; i < 14 ; i++)
+	{
+		pBufferController = (CCvControl*)GetDlgItem(IDC_CVCTRLGOING1 + i);
+
+		if (pBufferController == NULL)
+			continue;
+
+		if (pDoc->m_bBufferSuspend[i] == TRUE)
+		{
+			pBufferController->SetValue(RED, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE);
+			continue;
+		}
+
+		if (pDoc->m_bBufferReady[i] == TRUE)
+		{
+			pBufferController->SetValue(BLUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE);
+			continue;
+		}
+
+		pBufferController->SetValue(LIGHT_GRAY, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE);
+	}
+
+    //////////////////////////////////
+
 	static int nCount = 1;
 
 	char  sz4GroupBatch[32], 
@@ -1288,7 +1315,7 @@ void CEcsView::OnTimer(UINT nIDEvent)
 	}
 
 	static int nLineGoing[14] = {-1,-1,-1,-1,-1,-1,-1-1,-1,-1,-1,-1,-1,-1};
-	for (int i = 8; i < 14; i++)
+	for (i = 8; i < 14; i++)
 	{
 		if(nLineGoing[i] != pDoc->m_bLineGoing[i])
 		{

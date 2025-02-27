@@ -5734,7 +5734,9 @@ BEGIN
                     ES_READONLY
     RTEXT           "출발 시간:",IDC_STATIC,9,169,39,8
     CONTROL         "작업정지",IDC_CHK_SUSPEND,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,178,50,48,10
+                    WS_TABSTOP,180,50,48,10
+    CONTROL         "준비됨",IDC_CHK_READY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,180,64,40,10
 END
 
 
@@ -6019,6 +6021,7 @@ BEGIN
         LEFTMARGIN, 3
         RIGHTMARGIN, 237
         VERTGUIDE, 165
+        VERTGUIDE, 180
         TOPMARGIN, 3
         BOTTOMMARGIN, 187
     END

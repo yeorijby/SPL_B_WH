@@ -21,6 +21,7 @@ CBufferController::CBufferController(CWnd* pParent /*=NULL*/)
 {
 	//{{AFX_DATA_INIT(CBufferController)
 	m_bSuspend = FALSE;
+	m_bReady = FALSE;
 	//}}AFX_DATA_INIT
 
 	for (int i = 0 ; i < 2 ; i++)
@@ -38,12 +39,15 @@ void CBufferController::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CBufferController)
 	DDX_Check(pDX, IDC_CHK_SUSPEND, m_bSuspend);
+	DDX_Check(pDX, IDC_CHK_READY, m_bReady);
 	//}}AFX_DATA_MAP
 }
 
 
 BEGIN_MESSAGE_MAP(CBufferController, CDialog)
 	//{{AFX_MSG_MAP(CBufferController)
+	ON_BN_CLICKED(IDC_CHK_SUSPEND, OnCheckSuspend)
+	ON_BN_CLICKED(IDC_CHK_READY, OnCheckReady)			// 일단은 읽어만 오는 걸로 하자!
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -105,7 +109,30 @@ BOOL CBufferController::OnInitDialog()
 	GetDlgItem(IDC_EDIT_START_TIME)->SetWindowText(strTime);
 
 
+	m_bSuspend = m_pDoc->m_bBufferSuspend[m_nID];
+	m_bReady = m_pDoc->m_bBufferReady[m_nID];
+	UpdateData(FALSE);
+
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
 }
+
+void CBufferController::OnCheckSuspend() 
+{
+	m_pDoc->m_bBufferSuspend[m_nID] = !m_pDoc->m_bBufferSuspend[m_nID];
+
+	m_bSuspend = m_pDoc->m_bBufferSuspend[m_nID];
+	UpdateData(FALSE);
+}
+
+// 일단 이거는 읽어오는 걸로만 하자!
+
+void CBufferController::OnCheckReady() 
+{
+	m_pDoc->m_bBufferReady[m_nID] = !m_pDoc->m_bBufferReady[m_nID];
+
+	m_bReady = m_pDoc->m_bBufferReady[m_nID];
+	UpdateData(FALSE);
+}
+//*/

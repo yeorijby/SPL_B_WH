@@ -23,6 +23,7 @@ public:
 	//{{AFX_DATA(CBufferController)
 	enum { IDD = IDD_CV_CTRL1 };
 	BOOL	m_bSuspend;
+	BOOL	m_bReady;
 	//}}AFX_DATA
 
 // Attribute
@@ -46,6 +47,8 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CBufferController)
 	virtual BOOL OnInitDialog();
+	afx_msg void OnCheckSuspend();
+	afx_msg void OnCheckReady();			// 일단은 읽어만 오는 걸로 하자 
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

@@ -7518,6 +7518,7 @@ void CConveyor::BufferEmtpyCheck()
 		{			
 			// 비트세팅			// Ready 시간 세팅 - 비트 세팅이 성공했을 때 
 			WriteStatusBit(nDelegateTR, 4, FALSE);		// Excel 파일에서  4번째 비트를 하기로 했음 !
+			m_pDoc->m_bBufferReady[i] = FALSE;			// ECS 자체 신호 
 			m_pDoc->m_timeFullReady[i] = NULL;
 		}
 	}
@@ -7534,11 +7535,12 @@ void CConveyor::BufferFullCheck()
 		if (m_pDoc->m_bBufferSuspend[i] == TRUE)
 			continue;
 
-//		// 비트가 온 되어 있는지 확인하라. 
-//		if (비트 == TRUE)
-//			continue;
 
 		int nDelegateTR = nTemp + (i * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
+
+		// 비트가 온 되어 있는지 확인하라. - 이미 온 되어있으면 비트를 세팅할 필요가 없음
+		if (m_pDoc->m_bBufferReady[i] == TRUE)
+			break;
 
 		// 맨앞의 목적지 값을 가져와야 하리라. 
 		int nDestPos = TRACK_INFO[nDelegateTR].m_nDestPos;
@@ -7569,6 +7571,8 @@ void CConveyor::BufferFullCheck()
 		{			
 			// 비트세팅			// Ready 시간 세팅 - 비트 세팅이 성공했을 때
 			WriteStatusBit(nDelegateTR, 4, TRUE);		// Excel 파일에서  4번째 비트를 하기로 했음 !
+			
+			m_pDoc->m_bBufferReady[i] = TRUE;			// ECS 자체 신호 
 			m_pDoc->m_timeFullReady[i] = CTime::GetCurrentTime();
 		}
 	}
