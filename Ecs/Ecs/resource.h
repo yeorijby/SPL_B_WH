@@ -114,6 +114,7 @@
 #define IDC_EDIT_BATCH_NUM_2            1055
 #define IDC_EDIT_PROD_CODE_NAME_2       1056
 #define IDC_EDIT_TRACK_LAST             1056
+#define IDC_EDIT_DEST1_FROM             1056
 #define IDC_EDIT_DEST_LOC               1057
 #define IDC_EDIT_SC_ACTIVE              1057
 #define IDC_EDIT_OP_MODE                1057
@@ -121,13 +122,16 @@
 #define IDC_EDIT_PRODLOAD               1058
 #define IDC_EDIT_CV_STATUS              1059
 #define IDC_STATIC_POS6                 1059
+#define IDC_EDIT_DEST1_TO               1059
 #define IDC_COMBO_START_POS             1060
 #define IDC_EDIT_PALLET_NUM             1060
 #define IDC_EDIT_LEVEL_NUM              1061
+#define IDC_EDIT_DEST2_FROM             1061
 #define IDC_COMBO_DEST_POS              1062
 #define IDC_EDIT_HOME_STAND_2           1062
 #define IDC_SC1                         1062
 #define IDC_EDIT_STO_HS                 1062
+#define IDC_EDIT_DEST2_TO               1062
 #define IDC_EDIT_JOB_PROGRESS_2         1063
 #define IDC_SC2                         1063
 #define IDC_EDIT_RET_HS                 1063
@@ -559,6 +563,10 @@
 #define IDC_STATIC_1ST                  2737
 #define IDC_CHK_SUSPEND                 2738
 #define IDC_CHK_READY                   2739
+#define IDC_SLIDER2                     2740
+#define IDC_RADIO1                      2742
+#define IDC_RADIO2                      2743
+#define IDC_STATIC_WRAP_DEST            2744
 #define IDC_EDIT_SET_LINE101            2751
 #define IDC_EDIT_SET_LINE102            2752
 #define IDC_EDIT_SET_LINE103            2753
@@ -710,6 +718,7 @@
 #define IDD_CVLINE_CTRL                 3121
 #define IDD_ECS_FORM_KOR6               3122
 #define IDD_CV_CTRL1                    3123
+#define IDD_CV_CTRL2                    3124
 #define IDC_CVCTRL1                     4465
 #define IDC_CVCTRL2                     4466
 #define IDC_CVCTRL3                     4467
@@ -1604,9 +1613,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        3075
+#define _APS_NEXT_RESOURCE_VALUE        3076
 #define _APS_NEXT_COMMAND_VALUE         40056
-#define _APS_NEXT_CONTROL_VALUE         2739
+#define _APS_NEXT_CONTROL_VALUE         2745
 #define _APS_NEXT_SYMED_VALUE           1001
 #endif
 #endif

@@ -2953,30 +2953,69 @@ void CEcsView::OnLBtnClickStacker(short nID)
 
 void CEcsView::OnLBtnClickBufferController(short nID) 
 {
-	m_ConveyorDlg2.m_nID = nID;
-	m_ConveyorDlg2.m_pDoc = GetDocument();
+	m_BufferControllerDlg.m_nID = nID;
+	m_BufferControllerDlg.m_pDoc = GetDocument();
 
-	if (m_ConveyorDlg2.m_hWnd == NULL) 
+	//=============================================================================================================================
+	// 레이아웃 변경하기 이전에 임시로 14번이 클릭되면 목적지 설정하는 부분이 뜨도록 했음! 
+	//=============================================================================================================================
+	if (nID == 13)	// 디버깅을 통해서 확인 해야 하는 부분임!
 	{
-		m_ConveyorDlg2.Create(IDD_CV_CTRL1);
+		OnLBtnClickBufferDestSetting(nID); 
+		return;
+	}
+	//-----------------------------------------------------------------------------------------------------------------------------
+
+	if (m_BufferControllerDlg.m_hWnd == NULL) 
+	{
+		m_BufferControllerDlg.Create(IDD_CV_CTRL1);
 	 
 		CRect MainRect;
 		CRect Rect;
 		CRect PosRect;
 
 		::AfxGetApp()->GetMainWnd()->GetWindowRect(&MainRect);   
-		m_ConveyorDlg2.GetWindowRect(&Rect); 
+		m_BufferControllerDlg.GetWindowRect(&Rect); 
 
 		PosRect.left = ((MainRect.right  - MainRect.left) - Rect.Width())  / 2; 
 		PosRect.top  = ((MainRect.bottom - MainRect.top)  - Rect.Height()) / 2; 
-		m_ConveyorDlg2.SetWindowPos(&wndTop, PosRect.left, PosRect.top, 
+		m_BufferControllerDlg.SetWindowPos(&wndTop, PosRect.left, PosRect.top, 
 									Rect.Width(), Rect.Height(), 
 									SWP_SHOWWINDOW);
 	} 
 	else 
 	{
-		if (!m_ConveyorDlg2.IsWindowVisible()) m_ConveyorDlg2.ShowWindow(SW_SHOWNORMAL);
-		m_ConveyorDlg2.SendMessage(WM_INITDIALOG);   
+		if (!m_BufferControllerDlg.IsWindowVisible()) m_BufferControllerDlg.ShowWindow(SW_SHOWNORMAL);
+		m_BufferControllerDlg.SendMessage(WM_INITDIALOG);   
+	}
+}
+
+void CEcsView::OnLBtnClickBufferDestSetting(short nID) 
+{
+	m_BufferDestSettingDlg.m_nID = nID;
+	m_BufferDestSettingDlg.m_pDoc = GetDocument();
+
+	if (m_BufferDestSettingDlg.m_hWnd == NULL) 
+	{
+		m_BufferDestSettingDlg.Create(IDD_CV_CTRL2);
+	 
+		CRect MainRect;
+		CRect Rect;
+		CRect PosRect;
+
+		::AfxGetApp()->GetMainWnd()->GetWindowRect(&MainRect);   
+		m_BufferDestSettingDlg.GetWindowRect(&Rect); 
+
+		PosRect.left = ((MainRect.right  - MainRect.left) - Rect.Width())  / 2; 
+		PosRect.top  = ((MainRect.bottom - MainRect.top)  - Rect.Height()) / 2; 
+		m_BufferDestSettingDlg.SetWindowPos(&wndTop, PosRect.left, PosRect.top, 
+									Rect.Width(), Rect.Height(), 
+									SWP_SHOWWINDOW);
+	} 
+	else 
+	{
+		if (!m_BufferDestSettingDlg.IsWindowVisible()) m_BufferDestSettingDlg.ShowWindow(SW_SHOWNORMAL);
+		m_BufferDestSettingDlg.SendMessage(WM_INITDIALOG);   
 	}
 }
 

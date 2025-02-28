@@ -6,10 +6,17 @@
 --------------------Configuration: Ecs - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\BOK-YE~1.JUN\AppData\Local\Temp\RSP52F7.tmp" with contents
+Creating temporary file "C:\Users\BOK-YE~1.JUN\AppData\Local\Temp\RSP5AA7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/Ecs.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"D:\project\SPL\SPL399\B_WH\일반비_1공장 (2)\프로그램\Ecs\Ecs\BufferDestSettingDlg.cpp"
+]
+Creating command line "cl.exe @"C:\Users\BOK-YE~1.JUN\AppData\Local\Temp\RSP5AA7.tmp"" 
+Creating temporary file "C:\Users\BOK-YE~1.JUN\AppData\Local\Temp\RSP5AA8.tmp" with contents
 [
 EcsLibD.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Ecs.pdb" /debug /machine:I386 /out:"Debug/Ecs.exe" 
-".\Debug\BufferController.obj"
+".\Debug\BufferControllerDlg.obj"
+".\Debug\BufferDestSettingDlg.obj"
 ".\Debug\ChangePasswordDlg.obj"
 ".\Debug\ColorViewDlg.obj"
 ".\Debug\CommonDlg.obj"
@@ -77,8 +84,10 @@ EcsLibD.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Ecs.pdb" /de
 ".\Debug\vctitle1.obj"
 ".\Debug\Ecs.res"
 ]
-Creating command line "link.exe @"C:\Users\BOK-YE~1.JUN\AppData\Local\Temp\RSP52F7.tmp""
+Creating command line "link.exe @"C:\Users\BOK-YE~1.JUN\AppData\Local\Temp\RSP5AA8.tmp""
 <h3>Output Window</h3>
+Compiling...
+BufferDestSettingDlg.cpp
 Linking...
 
 

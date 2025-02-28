@@ -5739,6 +5739,50 @@ BEGIN
                     WS_TABSTOP,180,64,40,10
 END
 
+IDD_CV_CTRL2 DIALOG DISCARDABLE  0, 0, 233, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "콘베이어 제어 정보"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "저장",IDC_BUTTON_WRITE,175,106,54,16
+    DEFPUSHBUTTON   "닫기",IDCANCEL,175,127,54,16
+    EDITTEXT        IDC_EDIT_TRACK_NUM,58,12,40,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "작업 지시",IDC_STATIC,175,3,54,39
+    GROUPBOX        "구간 정보",IDC_STATIC,4,3,166,29
+    RTEXT           "구간 번호:",IDC_STATIC,14,15,39,8
+    EDITTEXT        IDC_EDIT_OP_MODE,139,12,26,13,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE
+    RTEXT           "OP 모드:",IDC_STATIC,107,14,30,8,NOT WS_VISIBLE
+    GROUPBOX        "랩핑기 목적지 선택",IDC_STATIC,4,35,166,31
+    CONTROL         "작업정지",IDC_CHK_SUSPEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,181,13,48,10
+    CONTROL         "준비됨",IDC_CHK_READY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,181,27,40,10
+    CONTROL         "Slider1",IDC_SLIDER2,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,60,90,105,12
+    RTEXT           "목적지1 설정 :",IDC_STATIC,4,92,57,8
+    RTEXT           "1",IDC_STATIC,57,81,12,8
+    RTEXT           "13",IDC_STATIC,153,81,12,8
+    RTEXT           "[15] TR# 174 :",IDC_STATIC_WRAP_DEST,9,113,51,8
+    RTEXT           "[17] TR# 180 :",IDC_STATIC,9,125,51,8
+    CONTROL         "[15] TR# 174",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,
+                    50,54,8
+    CONTROL         "[16] TR# 176",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,88,
+                    50,54,8
+    GROUPBOX        "랩핑기 목적지 선택",IDC_STATIC,4,69,166,74
+    EDITTEXT        IDC_EDIT_DEST1_FROM,64,111,40,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_DEST1_TO,125,111,40,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    RTEXT           "~",IDC_STATIC,108,116,8,8
+    RTEXT           "~",IDC_STATIC,108,127,8,8
+    EDITTEXT        IDC_EDIT_DEST2_FROM,64,124,40,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_DEST2_TO,125,124,40,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
 
 #ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
@@ -6024,6 +6068,17 @@ BEGIN
         VERTGUIDE, 180
         TOPMARGIN, 3
         BOTTOMMARGIN, 187
+    END
+
+    IDD_CV_CTRL2, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 229
+        VERTGUIDE, 165
+        VERTGUIDE, 181
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 143
+        HORZGUIDE, 50
     END
 END
 #endif    // APSTUDIO_INVOKED

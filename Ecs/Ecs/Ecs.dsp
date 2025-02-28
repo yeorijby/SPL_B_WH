@@ -92,7 +92,11 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90"
 # Begin Source File
 
-SOURCE=.\BufferController.cpp
+SOURCE=.\BufferControllerDlg.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\BufferDestSettingDlg.cpp
 # End Source File
 # Begin Source File
 
@@ -369,7 +373,11 @@ SOURCE=.\vctitle1.cpp
 # PROP Default_Filter "h;hpp;hxx;hm;inl;fi;fd"
 # Begin Source File
 
-SOURCE=.\BufferController.h
+SOURCE=.\BufferControllerDlg.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\BufferDestSettingDlg.h
 # End Source File
 # Begin Source File
 
@@ -1062,237 +1070,237 @@ SOURCE=.\RES\Wxtfile.ico
 # End Group
 # End Target
 # End Project
-# Section Ecs : {EBF97E22-731F-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcLCoor
-# 	2:10:HeaderFile:vclcoor.h
-# 	2:8:ImplFile:vclcoor.cpp
-# End Section
-# Section Ecs : {51DCC624-95B7-11CE-86B3-444553540000}
-# 	2:5:Class:CVcSeriesMarker
-# 	2:10:HeaderFile:vcseriesmarker.h
-# 	2:8:ImplFile:vcseriesmarker.cpp
-# End Section
-# Section Ecs : {0AA0FE20-912A-11CE-86B3-444553540000}
-# 	2:5:Class:CVcSeries
-# 	2:10:HeaderFile:vcseries1.h
-# 	2:8:ImplFile:vcseries1.cpp
-# End Section
-# Section Ecs : {EDDF9242-764B-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcLocation
-# 	2:10:HeaderFile:vclocation.h
-# 	2:8:ImplFile:vclocation.cpp
-# End Section
-# Section Ecs : {6237536A-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcAxisScale
-# 	2:10:HeaderFile:vcaxisscale1.h
-# 	2:8:ImplFile:vcaxisscale1.cpp
-# End Section
-# Section Ecs : {00D6D1A0-728C-11CF-93D5-0020AF99504A}
-# 	2:5:Class:CMSChart
-# 	2:10:HeaderFile:mschart1.h
-# 	2:8:ImplFile:mschart1.cpp
-# End Section
-# Section Ecs : {9BA79C60-7403-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcColor
-# 	2:10:HeaderFile:vccolor1.h
-# 	2:8:ImplFile:vccolor1.cpp
-# End Section
-# Section Ecs : {2F6DD6A2-95E5-11CE-86B3-444553540000}
-# 	2:5:Class:CVcDataPointLabel
-# 	2:10:HeaderFile:vcdatapointlabel.h
-# 	2:8:ImplFile:vcdatapointlabel.cpp
-# End Section
-# Section Ecs : {4F053F00-8396-11CE-BECC-00AA0042CB33}
-# 	2:5:Class:CVcFootnote
-# 	2:10:HeaderFile:vcfootnote.h
-# 	2:8:ImplFile:vcfootnote.cpp
-# End Section
-# Section Ecs : {508D02E8-90FC-11CE-86B3-444553540000}
-# 	2:5:Class:CVcWall
-# 	2:10:HeaderFile:vcwall.h
-# 	2:8:ImplFile:vcwall.cpp
-# End Section
-# Section Ecs : {6237536E-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcAxisTitle
-# 	2:10:HeaderFile:vcaxistitle1.h
-# 	2:8:ImplFile:vcaxistitle1.cpp
-# End Section
-# Section Ecs : {21645F62-90F0-11CE-86B3-444553540000}
-# 	2:5:Class:CVcView3d
-# 	2:10:HeaderFile:vcview3d1.h
-# 	2:8:ImplFile:vcview3d1.cpp
-# End Section
-# Section Ecs : {AFE57020-7409-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcBrush
-# 	2:10:HeaderFile:vcbrush.h
-# 	2:8:ImplFile:vcbrush.cpp
-# End Section
-# Section Ecs : {6CB603A0-8F70-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcDataGrid
-# 	2:10:HeaderFile:vcdatagrid.h
-# 	2:8:ImplFile:vcdatagrid.cpp
-# End Section
-# Section Ecs : {95C52B60-83B1-11CE-BECC-00AA0042CB33}
-# 	2:5:Class:CVcLegend
-# 	2:10:HeaderFile:vclegend1.h
-# 	2:8:ImplFile:vclegend1.cpp
-# End Section
-# Section Ecs : {BEF6E003-A874-101A-8BBA-00AA00300CAB}
-# 	2:5:Class:COleFont
-# 	2:10:HeaderFile:font.h
-# 	2:8:ImplFile:font.cpp
-# End Section
-# Section Ecs : {62375366-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcIntersection
-# 	2:10:HeaderFile:vcintersection.h
-# 	2:8:ImplFile:vcintersection.cpp
-# End Section
-# Section Ecs : {2E6A37A2-77FC-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcBackdrop
-# 	2:10:HeaderFile:vcbackdrop.h
-# 	2:8:ImplFile:vcbackdrop.cpp
-# End Section
-# Section Ecs : {FD30FB02-789C-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcFill
-# 	2:10:HeaderFile:vcfill1.h
-# 	2:8:ImplFile:vcfill1.cpp
-# End Section
-# Section Ecs : {CD9EFA60-AA40-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcLightSource
-# 	2:10:HeaderFile:vclightsource.h
-# 	2:8:ImplFile:vclightsource.cpp
-# End Section
-# Section Ecs : {3080E742-813F-11CE-BECC-00AA0042CB33}
-# 	2:5:Class:CVcMarker
-# 	2:10:HeaderFile:vcmarker1.h
-# 	2:8:ImplFile:vcmarker1.cpp
-# End Section
-# Section Ecs : {51DCC622-95B7-11CE-86B3-444553540000}
-# 	2:5:Class:CVcSeriesPosition
-# 	2:10:HeaderFile:vcseriesposition.h
-# 	2:8:ImplFile:vcseriesposition.cpp
-# End Section
-# Section Ecs : {EBF97E20-731F-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcCoor
-# 	2:10:HeaderFile:vccoor.h
-# 	2:8:ImplFile:vccoor.cpp
-# End Section
-# Section Ecs : {6FE35CC0-CE50-11CE-8410-00AA0042CB33}
-# 	2:5:Class:CVcLightSources
-# 	2:10:HeaderFile:vclightsources.h
-# 	2:8:ImplFile:vclightsources.cpp
-# End Section
-# Section Ecs : {C20E5260-B06F-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcDataPoints
-# 	2:10:HeaderFile:vcdatapoints1.h
-# 	2:8:ImplFile:vcdatapoints1.cpp
-# End Section
-# Section Ecs : {2F6DD6A0-95E5-11CE-86B3-444553540000}
-# 	2:5:Class:CVcStatLine
-# 	2:10:HeaderFile:vcstatline.h
-# 	2:8:ImplFile:vcstatline.cpp
-# End Section
-# Section Ecs : {508D02E6-90FC-11CE-86B3-444553540000}
-# 	2:5:Class:CVcWeighting
-# 	2:10:HeaderFile:vcweighting.h
-# 	2:8:ImplFile:vcweighting.cpp
-# End Section
-# Section Ecs : {027D7900-A023-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcAxis
-# 	2:10:HeaderFile:vcaxis1.h
-# 	2:8:ImplFile:vcaxis1.cpp
-# End Section
-# Section Ecs : {FE5517C0-73FE-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcRect
-# 	2:10:HeaderFile:vcrect1.h
-# 	2:8:ImplFile:vcrect1.cpp
-# End Section
-# Section Ecs : {6237536C-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcValueScale
-# 	2:10:HeaderFile:vcvaluescale1.h
-# 	2:8:ImplFile:vcvaluescale1.cpp
-# End Section
-# Section Ecs : {62375370-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcLabel
-# 	2:10:HeaderFile:vclabel1.h
-# 	2:8:ImplFile:vclabel1.cpp
-# End Section
-# Section Ecs : {62375360-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcCategoryScale
-# 	2:10:HeaderFile:vccategoryscale1.h
-# 	2:8:ImplFile:vccategoryscale1.cpp
-# End Section
-# Section Ecs : {B54A6420-A25E-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcLight
-# 	2:10:HeaderFile:vclight1.h
-# 	2:8:ImplFile:vclight1.cpp
-# End Section
-# Section Ecs : {2F6DD6A4-95E5-11CE-86B3-444553540000}
-# 	2:5:Class:CVcDataPoint
-# 	2:10:HeaderFile:vcdatapoint1.h
-# 	2:8:ImplFile:vcdatapoint1.cpp
-# End Section
-# Section Ecs : {C14E8B60-AE2B-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcSeriesCollection
-# 	2:10:HeaderFile:vcseriescollection1.h
-# 	2:8:ImplFile:vcseriescollection1.cpp
-# End Section
-# Section Ecs : {2E6A37A0-77FC-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcFont
-# 	2:10:HeaderFile:vcfont1.h
-# 	2:8:ImplFile:vcfont1.cpp
-# End Section
-# Section Ecs : {62375364-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcAxisGrid
-# 	2:10:HeaderFile:vcaxisgrid1.h
-# 	2:8:ImplFile:vcaxisgrid1.cpp
-# End Section
-# Section Ecs : {62B9A400-B93D-11CE-8410-00AA0042CB33}
-# 	2:5:Class:CVcLabels
-# 	2:10:HeaderFile:vclabels1.h
-# 	2:8:ImplFile:vclabels1.cpp
+# Section Ecs : {E26C7700-756C-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcTextLayout
+# 	2:10:HeaderFile:vctextlayout.h
+# 	2:8:ImplFile:vctextlayout.cpp
 # End Section
 # Section Ecs : {508D02E0-90FC-11CE-86B3-444553540000}
 # 	2:5:Class:CVcPlotBase
 # 	2:10:HeaderFile:vcplotbase1.h
 # 	2:8:ImplFile:vcplotbase1.cpp
 # End Section
-# Section Ecs : {E26C7700-756C-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcTextLayout
-# 	2:10:HeaderFile:vctextlayout.h
-# 	2:8:ImplFile:vctextlayout.cpp
+# Section Ecs : {62B9A400-B93D-11CE-8410-00AA0042CB33}
+# 	2:5:Class:CVcLabels
+# 	2:10:HeaderFile:vclabels1.h
+# 	2:8:ImplFile:vclabels1.cpp
 # End Section
-# Section Ecs : {AFE57022-7409-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcShadow
-# 	2:10:HeaderFile:vcshadow1.h
-# 	2:8:ImplFile:vcshadow1.cpp
+# Section Ecs : {62375364-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcAxisGrid
+# 	2:10:HeaderFile:vcaxisgrid1.h
+# 	2:8:ImplFile:vcaxisgrid1.cpp
 # End Section
-# Section Ecs : {F75BA680-9057-115E-85B3-448553548000}
-# 	2:5:Class:CVcPlot
-# 	2:10:HeaderFile:vcplot1.h
-# 	2:8:ImplFile:vcplot1.cpp
+# Section Ecs : {2E6A37A0-77FC-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcFont
+# 	2:10:HeaderFile:vcfont1.h
+# 	2:8:ImplFile:vcfont1.cpp
 # End Section
-# Section Ecs : {279B5A40-8098-11CE-BECC-00AA0042CB33}
-# 	2:5:Class:CVcPen
-# 	2:10:HeaderFile:vcpen.h
-# 	2:8:ImplFile:vcpen.cpp
+# Section Ecs : {31291E80-728C-11CF-93D5-0020AF99504A}
+# 	2:21:DefaultSinkHeaderFile:mschart1.h
+# 	2:16:DefaultSinkClass:CMSChart
 # End Section
 # Section Ecs : {C82141A0-7571-11CE-840F-00AA0042CB33}
 # 	2:5:Class:CVcTitle
 # 	2:10:HeaderFile:vctitle1.h
 # 	2:8:ImplFile:vctitle1.cpp
 # End Section
-# Section Ecs : {31291E80-728C-11CF-93D5-0020AF99504A}
-# 	2:21:DefaultSinkHeaderFile:mschart1.h
-# 	2:16:DefaultSinkClass:CMSChart
+# Section Ecs : {279B5A40-8098-11CE-BECC-00AA0042CB33}
+# 	2:5:Class:CVcPen
+# 	2:10:HeaderFile:vcpen.h
+# 	2:8:ImplFile:vcpen.cpp
+# End Section
+# Section Ecs : {F75BA680-9057-115E-85B3-448553548000}
+# 	2:5:Class:CVcPlot
+# 	2:10:HeaderFile:vcplot1.h
+# 	2:8:ImplFile:vcplot1.cpp
+# End Section
+# Section Ecs : {AFE57022-7409-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcShadow
+# 	2:10:HeaderFile:vcshadow1.h
+# 	2:8:ImplFile:vcshadow1.cpp
+# End Section
+# Section Ecs : {62375368-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcTick
+# 	2:10:HeaderFile:vctick.h
+# 	2:8:ImplFile:vctick.cpp
 # End Section
 # Section Ecs : {2E6A37A4-77FC-11CE-840F-00AA0042CB33}
 # 	2:5:Class:CVcFrame
 # 	2:10:HeaderFile:vcframe.h
 # 	2:8:ImplFile:vcframe.cpp
 # End Section
-# Section Ecs : {62375368-A17D-11CE-840F-00AA0042CB33}
-# 	2:5:Class:CVcTick
-# 	2:10:HeaderFile:vctick.h
-# 	2:8:ImplFile:vctick.cpp
+# Section Ecs : {EDDF9242-764B-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcLocation
+# 	2:10:HeaderFile:vclocation.h
+# 	2:8:ImplFile:vclocation.cpp
+# End Section
+# Section Ecs : {0AA0FE20-912A-11CE-86B3-444553540000}
+# 	2:5:Class:CVcSeries
+# 	2:10:HeaderFile:vcseries1.h
+# 	2:8:ImplFile:vcseries1.cpp
+# End Section
+# Section Ecs : {51DCC624-95B7-11CE-86B3-444553540000}
+# 	2:5:Class:CVcSeriesMarker
+# 	2:10:HeaderFile:vcseriesmarker.h
+# 	2:8:ImplFile:vcseriesmarker.cpp
+# End Section
+# Section Ecs : {EBF97E22-731F-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcLCoor
+# 	2:10:HeaderFile:vclcoor.h
+# 	2:8:ImplFile:vclcoor.cpp
+# End Section
+# Section Ecs : {00D6D1A0-728C-11CF-93D5-0020AF99504A}
+# 	2:5:Class:CMSChart
+# 	2:10:HeaderFile:mschart1.h
+# 	2:8:ImplFile:mschart1.cpp
+# End Section
+# Section Ecs : {6237536A-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcAxisScale
+# 	2:10:HeaderFile:vcaxisscale1.h
+# 	2:8:ImplFile:vcaxisscale1.cpp
+# End Section
+# Section Ecs : {508D02E8-90FC-11CE-86B3-444553540000}
+# 	2:5:Class:CVcWall
+# 	2:10:HeaderFile:vcwall.h
+# 	2:8:ImplFile:vcwall.cpp
+# End Section
+# Section Ecs : {9BA79C60-7403-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcColor
+# 	2:10:HeaderFile:vccolor1.h
+# 	2:8:ImplFile:vccolor1.cpp
+# End Section
+# Section Ecs : {6237536E-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcAxisTitle
+# 	2:10:HeaderFile:vcaxistitle1.h
+# 	2:8:ImplFile:vcaxistitle1.cpp
+# End Section
+# Section Ecs : {4F053F00-8396-11CE-BECC-00AA0042CB33}
+# 	2:5:Class:CVcFootnote
+# 	2:10:HeaderFile:vcfootnote.h
+# 	2:8:ImplFile:vcfootnote.cpp
+# End Section
+# Section Ecs : {2F6DD6A2-95E5-11CE-86B3-444553540000}
+# 	2:5:Class:CVcDataPointLabel
+# 	2:10:HeaderFile:vcdatapointlabel.h
+# 	2:8:ImplFile:vcdatapointlabel.cpp
+# End Section
+# Section Ecs : {6CB603A0-8F70-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcDataGrid
+# 	2:10:HeaderFile:vcdatagrid.h
+# 	2:8:ImplFile:vcdatagrid.cpp
+# End Section
+# Section Ecs : {AFE57020-7409-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcBrush
+# 	2:10:HeaderFile:vcbrush.h
+# 	2:8:ImplFile:vcbrush.cpp
+# End Section
+# Section Ecs : {21645F62-90F0-11CE-86B3-444553540000}
+# 	2:5:Class:CVcView3d
+# 	2:10:HeaderFile:vcview3d1.h
+# 	2:8:ImplFile:vcview3d1.cpp
+# End Section
+# Section Ecs : {62375366-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcIntersection
+# 	2:10:HeaderFile:vcintersection.h
+# 	2:8:ImplFile:vcintersection.cpp
+# End Section
+# Section Ecs : {BEF6E003-A874-101A-8BBA-00AA00300CAB}
+# 	2:5:Class:COleFont
+# 	2:10:HeaderFile:font.h
+# 	2:8:ImplFile:font.cpp
+# End Section
+# Section Ecs : {95C52B60-83B1-11CE-BECC-00AA0042CB33}
+# 	2:5:Class:CVcLegend
+# 	2:10:HeaderFile:vclegend1.h
+# 	2:8:ImplFile:vclegend1.cpp
+# End Section
+# Section Ecs : {EBF97E20-731F-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcCoor
+# 	2:10:HeaderFile:vccoor.h
+# 	2:8:ImplFile:vccoor.cpp
+# End Section
+# Section Ecs : {51DCC622-95B7-11CE-86B3-444553540000}
+# 	2:5:Class:CVcSeriesPosition
+# 	2:10:HeaderFile:vcseriesposition.h
+# 	2:8:ImplFile:vcseriesposition.cpp
+# End Section
+# Section Ecs : {3080E742-813F-11CE-BECC-00AA0042CB33}
+# 	2:5:Class:CVcMarker
+# 	2:10:HeaderFile:vcmarker1.h
+# 	2:8:ImplFile:vcmarker1.cpp
+# End Section
+# Section Ecs : {CD9EFA60-AA40-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcLightSource
+# 	2:10:HeaderFile:vclightsource.h
+# 	2:8:ImplFile:vclightsource.cpp
+# End Section
+# Section Ecs : {FD30FB02-789C-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcFill
+# 	2:10:HeaderFile:vcfill1.h
+# 	2:8:ImplFile:vcfill1.cpp
+# End Section
+# Section Ecs : {2E6A37A2-77FC-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcBackdrop
+# 	2:10:HeaderFile:vcbackdrop.h
+# 	2:8:ImplFile:vcbackdrop.cpp
+# End Section
+# Section Ecs : {6FE35CC0-CE50-11CE-8410-00AA0042CB33}
+# 	2:5:Class:CVcLightSources
+# 	2:10:HeaderFile:vclightsources.h
+# 	2:8:ImplFile:vclightsources.cpp
+# End Section
+# Section Ecs : {FE5517C0-73FE-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcRect
+# 	2:10:HeaderFile:vcrect1.h
+# 	2:8:ImplFile:vcrect1.cpp
+# End Section
+# Section Ecs : {C20E5260-B06F-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcDataPoints
+# 	2:10:HeaderFile:vcdatapoints1.h
+# 	2:8:ImplFile:vcdatapoints1.cpp
+# End Section
+# Section Ecs : {027D7900-A023-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcAxis
+# 	2:10:HeaderFile:vcaxis1.h
+# 	2:8:ImplFile:vcaxis1.cpp
+# End Section
+# Section Ecs : {508D02E6-90FC-11CE-86B3-444553540000}
+# 	2:5:Class:CVcWeighting
+# 	2:10:HeaderFile:vcweighting.h
+# 	2:8:ImplFile:vcweighting.cpp
+# End Section
+# Section Ecs : {2F6DD6A0-95E5-11CE-86B3-444553540000}
+# 	2:5:Class:CVcStatLine
+# 	2:10:HeaderFile:vcstatline.h
+# 	2:8:ImplFile:vcstatline.cpp
+# End Section
+# Section Ecs : {62375360-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcCategoryScale
+# 	2:10:HeaderFile:vccategoryscale1.h
+# 	2:8:ImplFile:vccategoryscale1.cpp
+# End Section
+# Section Ecs : {62375370-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcLabel
+# 	2:10:HeaderFile:vclabel1.h
+# 	2:8:ImplFile:vclabel1.cpp
+# End Section
+# Section Ecs : {6237536C-A17D-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcValueScale
+# 	2:10:HeaderFile:vcvaluescale1.h
+# 	2:8:ImplFile:vcvaluescale1.cpp
+# End Section
+# Section Ecs : {C14E8B60-AE2B-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcSeriesCollection
+# 	2:10:HeaderFile:vcseriescollection1.h
+# 	2:8:ImplFile:vcseriescollection1.cpp
+# End Section
+# Section Ecs : {2F6DD6A4-95E5-11CE-86B3-444553540000}
+# 	2:5:Class:CVcDataPoint
+# 	2:10:HeaderFile:vcdatapoint1.h
+# 	2:8:ImplFile:vcdatapoint1.cpp
+# End Section
+# Section Ecs : {B54A6420-A25E-11CE-840F-00AA0042CB33}
+# 	2:5:Class:CVcLight
+# 	2:10:HeaderFile:vclight1.h
+# 	2:8:ImplFile:vclight1.cpp
 # End Section

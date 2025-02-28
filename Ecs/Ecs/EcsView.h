@@ -4,7 +4,8 @@
 
 #include "EcsDef.h"
 #include "ConveyorDlg.h"
-#include "BufferController.h"
+#include "BufferControllerDlg.h"
+#include "BufferDestSettingDlg.h"
 #include "ToolTipWnd.h"
 #include "EcsDoc.h"
 //#include "Label.h"
@@ -60,8 +61,8 @@ public:
 	CEcsDoc* GetDocument();
 
 	CConveyorDlg m_ConveyorDlg;
-	CBufferController m_ConveyorDlg2;
-
+	CBufferControllerDlg m_BufferControllerDlg;
+	CBufferDestSettingDlg m_BufferDestSettingDlg;
 	int	m_nMainTimerID;
 	CToolTipWnd m_bttWnd;
 	COLORREF GetCvColor(BOOL bOverTime, BOOL bOverLoad,BOOL bBuffTrouble,  int nJobType, BOOL bOpMode, BOOL bPltSensor=FALSE);
@@ -113,6 +114,7 @@ protected:
 	afx_msg void OnLBtnClickConveyor(short nID);
 	afx_msg void OnLBtnClickRgv(short nID);
 	afx_msg void OnLBtnClickBufferController(short nID); 
+	afx_msg void OnLBtnClickBufferDestSetting(short nID); 
 	afx_msg void OnCheckBufferFull1();
 	afx_msg void OnCheckBufferFull2();
 	afx_msg void OnCheckBufferFull3();
