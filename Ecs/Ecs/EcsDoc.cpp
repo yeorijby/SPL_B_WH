@@ -166,7 +166,8 @@ CEcsDoc::CEcsDoc()
 		m_bBufferSuspend[i] = FALSE;
 		m_bBufferReady[i] = FALSE;
 	}
-	
+	m_nBufferDest1To = 0;
+	m_nBufferDest1 = 0;
 
 	m_ConveyorMsg.bCopy = FALSE;
 

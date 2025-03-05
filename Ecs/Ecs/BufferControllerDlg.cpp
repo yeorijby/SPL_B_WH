@@ -23,14 +23,6 @@ CBufferControllerDlg::CBufferControllerDlg(CWnd* pParent /*=NULL*/)
 	m_bSuspend = FALSE;
 	m_bReady = FALSE;
 	//}}AFX_DATA_INIT
-
-	for (int i = 0 ; i < 2 ; i++)
-	{
-		for(int j = 0 ; j < 6 ; j++)
-		{
-			m_nLuggNo[2][6] = 0;
-		}
-	}
 }
 
 

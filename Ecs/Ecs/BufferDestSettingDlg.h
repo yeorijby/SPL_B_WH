@@ -22,8 +22,9 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CBufferDestSettingDlg)
 	enum { IDD = IDD_CV_CTRL2 };
-//	BOOL	m_bSuspend;
-//	BOOL	m_bReady;
+	CSliderCtrl	m_Slider;
+	int			m_nDest1To;
+	int			m_nDest2From;
 	//}}AFX_DATA
 
 // Attribute
@@ -47,8 +48,9 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CBufferDestSettingDlg)
 	virtual BOOL OnInitDialog();
-//	afx_msg void OnCheckSuspend();
-//	afx_msg void OnCheckReady();			// 일단은 읽어만 오는 걸로 하자 
+	afx_msg void OnRangeRadioGroup(UINT uID);
+	afx_msg void OnHScroll(UINT uSBCode, UINT nPos, CScrollBar* pScrollBar);
+	afx_msg void OnButtonSave();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

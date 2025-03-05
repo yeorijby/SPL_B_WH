@@ -4611,6 +4611,149 @@ void CConveyor::LineCountCheck5()
 	}
 }
 
+BOOL CConveyor::LineCountChecking(CMoveJobItem *pMoveJobItem, 
+								  BOOL& bNotFullCheck, 
+								  int& nSetLineCount2, 
+								  int& nDestPos,
+								  int nSetLine2, 
+								  int nLineQuantity,
+								  int nDestNo, 
+								  int nCurLuggNum)
+{
+	CString strLog;
+	BOOL bResult = FALSE;
+	if (pMoveJobItem->m_nLineNum == nSetLine2 && nLineQuantity > 1)
+	{
+		//다른 제품이 한라인에 섞이지 않게..
+		CMoveJobItem *pMoveLastJobItem = MOVEJOB->BufferLineLastCheck(nSetLine2, nDestNo, pMoveJobItem->m_strProductID);
+		if (pMoveLastJobItem != NULL)								
+			return FALSE;
+
+		nSetLineCount2++;
+		pMoveJobItem->m_nBatchNo = nDestNo;
+		nDestPos = nDestNo;
+
+		pMoveJobItem->m_nStatus = JOB_STA_MOVE_CV_BUFFER_OPER_INVOKE;
+
+		strLog.Format("LineCountChecking.. 카운트 체크.. ImsBuffer=[%d], BufferLine=[%d], Count=[%d] ..", 
+			pMoveJobItem->m_nLineNum, pMoveJobItem->m_nBatchNo, nSetLineCount2);
+		LOG_JOB(LOG_POS_CV, nCurLuggNum, strLog);
+
+		bNotFullCheck = TRUE;
+		bResult = TRUE;
+	}
+
+	return bResult;
+}
+
+void CConveyor::LineCountCheck8()
+{
+	CString strLog;
+	int nLineQuantity=0;
+
+	for (int k=0; k<14; k++)
+	{
+		int nTrackNum = 2101 - 1 + k;
+		int nCurLuggNum = TRACK_INFO[nTrackNum].m_nLuggNum;
+
+		int nJobType = TRACK_INFO[nTrackNum].m_nJobType;
+		int nStartPos = TRACK_INFO[nTrackNum].m_nStartPos;
+		int nDestPos = TRACK_INFO[nTrackNum].m_nDestPos;
+		int nComplete = TRACK_INFO[nTrackNum].m_nComplete;
+
+		BOOL bNotFullCheck = FALSE;
+
+		if (nCurLuggNum == 0) m_nLineCountLuggNum6 = 0;
+		if (nCurLuggNum == m_nLineCountLuggNum6)			
+			continue;
+
+		CMoveJobItem *pMoveJobItem = MOVEJOB->Find(nCurLuggNum);
+		if (pMoveJobItem == NULL)								
+			continue;
+
+		if (pMoveJobItem->GetPattern() == JOB_PATTERN_STO || pMoveJobItem->GetPattern() == JOB_PATTERN_RET)		
+			continue;
+
+		int i=0;
+		for (i = 0 ; i < 14 ; i++)
+		{
+			if (pMoveJobItem->m_nLineNum == m_pDoc->m_nSetLine2[i])
+				nLineQuantity++;
+				continue;
+		}
+
+		// if else 문을 14개 쓰기 싫어서...
+		for (i = 0 ; i < 14 ; i++)
+		{
+			//	BOOL LineCountChecking(CMoveJobItem*	pMoveJobItem,	// 1
+			//						   BOOL&			bNotFullCheck,	// 2
+			//						   int&				nSetLineCount2,	// 3
+			//						   int&				nDestPos,		// 4
+			//						   int				nSetLine2,		// 5
+			//						   int				nLineQuantity,	// 6
+			//						   int				nDestNo,		// 7
+			//						   int				nCurLuggNum);	// 8
+								// 1			2				3							4			5						6				7	8
+			if (LineCountChecking(pMoveJobItem, bNotFullCheck, m_pDoc->m_nSetLineCount2[i], nDestPos, m_pDoc->m_nSetLine2[i], nLineQuantity, i + 1, nCurLuggNum) == TRUE)
+				break;
+		}
+
+		// for 문 다 돌때까지 카운트를 체크하지 못했다면... => else 일 경우(else if가 아니라....)
+		if (i == 14)
+		{
+			if (nLineQuantity == 1)
+			{
+				for(int j=0; j<14; j++)
+				{
+					if (pMoveJobItem->m_nLineNum != m_pDoc->m_nSetLine2[j])
+						continue;
+
+					// LineCountChecking이거 조금 수정하면 이것도 할수 있겠지만 일단은 그냥 이렇게 함! 
+					if (pMoveJobItem->m_nLineNum == m_pDoc->m_nSetLine2[j])
+					{
+						//if(m_pDoc->m_nSetLineCount2[i] >= 16)
+						//	continue;
+
+						//다른 제품이 한라인에 섞이지 않게..
+						CMoveJobItem *pMoveLastJobItem = MOVEJOB->BufferLineLastCheck(m_pDoc->m_nSetLine2[j], j+1, pMoveJobItem->m_strProductID);
+						if(pMoveLastJobItem != NULL)								
+							continue;
+
+						//m_pDoc->m_nSetLineCount2[i] = MOVEJOB->BufferLineCountCheck(m_pDoc->m_nSetLine2[i], i+1, nCurLuggNum);
+						m_pDoc->m_nSetLineCount2[j]++;
+						pMoveJobItem->m_nBatchNo = j+1;
+						nDestPos = j+1;
+
+						pMoveJobItem->m_nStatus = JOB_STA_MOVE_CV_BUFFER_OPER_INVOKE;
+
+						strLog.Format("LineCountCheck8.. 카운트 체크.. ImsBuffer=[%d], BufferLine=[%d], Count=[%d] ..", 
+							pMoveJobItem->m_nLineNum, pMoveJobItem->m_nBatchNo, m_pDoc->m_nSetLineCount2[j]);
+						LOG_JOB(LOG_POS_CV, nCurLuggNum, strLog);
+
+						bNotFullCheck = TRUE;
+					}	// if(pMoveJobItem->m_nLineNum == m_pDoc->m_nSetLine2[j])
+				}	// for(int j=0; j<14; j++)
+			}	// if(nLineQuantity == 1)	
+		}	// if (i == 14)
+
+
+		if(bNotFullCheck)
+		{
+			if(WriteTrackInfo(nTrackNum, nCurLuggNum, nJobType, nStartPos, nDestPos, nComplete))
+			{
+				m_nLineCountLuggNum8 = nCurLuggNum;
+
+				strLog.Format("WriteTrackInfo..LineCountCheck8.. CV#%d 도착지[%d] 쓰기 성공..!", nTrackNum+1, nDestPos);
+				LOG_JOB(LOG_POS_CV, nCurLuggNum, strLog);
+			}
+			else
+			{
+				strLog.Format("WriteTrackInfo..LineCountCheck8.. CV#%d 도착지[%d] 쓰기 실패..!", nTrackNum+1, nDestPos);
+				LOG_ERROR(LOG_POS_CV, nCurLuggNum, strLog);
+			}
+		}	// if(bNotFullCheck)
+	}	// for (int i=0; i<1; i++)
+}
 void CConveyor::LineCountCheck6()
 {
 	CString strLog;
@@ -7611,6 +7754,7 @@ void CConveyor::BufferStartCheck()
 	///////// 인덱스를 가져왔을때 --- 해당 위치의 화물들을 출발 시킨다. 
 	int nTrackNo = nTemp + (nIndex * 10) + 2100 - 1;		// 인덱스 이므로 -1 해줘야 함! 
 
+	int nDestPos;
 	BOOL bResult = TRUE;
 	for ( i = 0; i < BUFFER_CNT; i++ )		// 6
 	{
@@ -7619,7 +7763,17 @@ void CConveyor::BufferStartCheck()
 		int nLuggNum2	= TRACK_INFO[nTrackNum].m_nLuggNum2;
 		int nJobType	= TRACK_INFO[nTrackNum].m_nJobType;
 		int nStartPos	= TRACK_INFO[nTrackNum].m_nStartPos;
-		int nDestPos	= 15;									// 15나 16중 택일 or  17	// TRACK_INFO[nTrackNum].m_nDestPos;
+
+		if (nIndex <= m_pDoc->m_nBufferDest1To)
+		{
+			// m_pDoc->m_nBufferDest1이 값이 결정되지 않았다면 무조건 15로 세팅 
+			nDestPos = (m_pDoc->m_nBufferDest1 == 0)? 15 : m_pDoc->m_nBufferDest1; 
+		}
+		else
+		{
+			nDestPos = 17;
+		}
+											// 15나 16중 택일 or  17	// TRACK_INFO[nTrackNum].m_nDestPos;
 		int nComplete	= TRACK_INFO[nTrackNum].m_nComplete;
 		int nSize		= TRACK_INFO[nTrackNum].m_nSize;
 

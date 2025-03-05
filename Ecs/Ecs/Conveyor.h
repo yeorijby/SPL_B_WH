@@ -30,6 +30,7 @@ public:
 	int m_nLineCountLuggNum4;
 	int m_nLineCountLuggNum5;
 	int m_nLineCountLuggNum6;
+	int m_nLineCountLuggNum8;
 	int m_nArrivedDiscountLugg[14];
 
 	int m_nCvNextRtn;
@@ -60,6 +61,7 @@ public:
 	void LineCountCheck4(); //¹Ì»ç¿ë
 	void LineCountCheck5();
 	void LineCountCheck6();
+	void LineCountCheck8();
 	void ArrivedDiscountCheck(); 
 
 	void ArriveRemoveCheck4Group();
@@ -106,6 +108,14 @@ public:
 	int  WritePlcCountInfo(int nTrackNum, int nPlcCount);
 	int  WriteLineGroupInfo(int nD1=0, int nD2=0, int nD3=0, int nD4=0, int nD5=0, int nD6=0, int nD7=0, int nD8=0, int nD9=0, int nD10=0, int nD11=0, int nD12=0, int nD13=0, int nD14=0);
 	int  WriteStatusBit(int nTrackNo, int nIndex, BOOL bSet = TRUE);
+	BOOL LineCountChecking(CMoveJobItem*	pMoveJobItem, 
+						   BOOL&			bNotFullCheck, 
+						   int&				nSetLineCount2, 
+						   int&				nDestPos,
+						   int				nSetLine2, 
+						   int				nLineQuantity, 
+						   int				nDestNo, 
+						   int				nCurLuggNum);
 
 	void StoInvokeCheck();
 	void StoInvokeCheck2();

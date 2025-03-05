@@ -60,10 +60,12 @@ public:
 	int m_nAlive;
 
 	// 버퍼 관리 관련 
-	CTime m_timeFullReady[14];
-	CTime m_timeStart[14];
-	BOOL  m_bBufferSuspend[14];
-	BOOL  m_bBufferReady[14];
+	CTime	m_timeFullReady[14];
+	CTime	m_timeStart[14];
+	BOOL	m_bBufferSuspend[14];
+	BOOL	m_bBufferReady[14];
+	int		m_nBufferDest1To;	// 14개 중에 얼마까지가 1번 DEST 인가? 
+	int		m_nBufferDest1;		// 15 or 16
 
 	
 	CPtrList m_MsgList;

@@ -32,7 +32,7 @@ public:
 	int m_nID;
 
 
-	int m_nLuggNo[2][6];
+//	int m_nLuggNo[2][6];
 
 // Overrides
 	// ClassWizard generated virtual function overrides

@@ -20,17 +20,9 @@ CBufferDestSettingDlg::CBufferDestSettingDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CBufferDestSettingDlg::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CBufferDestSettingDlg)
-//	m_bSuspend = FALSE;
-//	m_bReady = FALSE;
+
 	//}}AFX_DATA_INIT
 
-//	for (int i = 0 ; i < 2 ; i++)
-//	{
-//		for(int j = 0 ; j < 6 ; j++)
-//		{
-//			m_nLuggNo[2][6] = 0;
-//		}
-//	}
 }
 
 
@@ -38,16 +30,21 @@ void CBufferDestSettingDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CBufferDestSettingDlg)
-//	DDX_Check(pDX, IDC_CHK_SUSPEND, m_bSuspend);
-//	DDX_Check(pDX, IDC_CHK_READY, m_bReady);
+	DDX_Control(pDX, IDC_SLIDER2, m_Slider);
+	DDX_Text(pDX, IDC_EDIT_DEST1_TO, m_nDest1To);
+	DDV_MinMaxInt(pDX, m_nDest1To, 1, 13);
+	DDX_Text(pDX, IDC_EDIT_DEST2_FROM, m_nDest2From);
+	DDV_MinMaxInt(pDX, m_nDest2From, 2, 14);
 	//}}AFX_DATA_MAP
 }
 
 
 BEGIN_MESSAGE_MAP(CBufferDestSettingDlg, CDialog)
 	//{{AFX_MSG_MAP(CBufferDestSettingDlg)
-//	ON_BN_CLICKED(IDC_CHK_SUSPEND, OnCheckSuspend)
-//	ON_BN_CLICKED(IDC_CHK_READY, OnCheckReady)			// 일단은 읽어만 오는 걸로 하자!
+	ON_WM_HSCROLL()
+	ON_BN_CLICKED(IDC_BUTTON_SAVE, OnButtonSave)
+	//NM_CUSTOMDRAW()
+	ON_CONTROL_RANGE(BN_CLICKED, IDC_RADIO1, IDC_RADIO2, OnRangeRadioGroup)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -59,81 +56,63 @@ BOOL CBufferDestSettingDlg::OnInitDialog()
 	CDialog::OnInitDialog();
 	
 	// TODO: Add extra initialization here
-	CString strTemp;//, strTemp1, strTemp2, strTemp3, strTemp4, strTemp5, strTemp6;
+	CString strTemp;
 	strTemp.Format(" #%d", m_nID + 1);
 	GetDlgItem(IDC_EDIT_TRACK_NUM)->SetWindowText(strTemp);
 
-//	CTime theTime = CTime::GetCurrentTime();
+	GetDlgItem(IDC_EDIT_DEST1_FROM)->SetWindowText(_T("1"));
+	GetDlgItem(IDC_EDIT_DEST1_TO)->SetWindowText(_T("1"));
 
-	/*
-	int nTemp = 28;			// -6개 
-	int nTempTemp = nTemp + (m_nID * 10) + 2100;
+	GetDlgItem(IDC_EDIT_DEST2_FROM)->SetWindowText(_T("2"));
+	GetDlgItem(IDC_EDIT_DEST2_TO)->SetWindowText(_T("14"));
 
-	int nTemp1 = nTempTemp - 0;
-	int nTemp2 = nTempTemp - 1;
-	int nTemp3 = nTempTemp - 2;
-	int nTemp4 = nTempTemp - 3;
-	int nTemp5 = nTempTemp - 4;
-	int nTemp6 = nTempTemp - 5;
+	m_Slider.SetRange(1, 13);
 
-	int nTempTempTemp[6] = {nTemp1,nTemp2,nTemp3,nTemp4,nTemp5,nTemp6};
-
-
-	strTemp.Format(" #%d", nTemp1);		GetDlgItem(IDC_STATIC_1ST)->SetWindowText(strTemp);
-	strTemp.Format(" #%d", nTemp2);		GetDlgItem(IDC_STATIC_2ND)->SetWindowText(strTemp);
-	strTemp.Format(" #%d", nTemp3);		GetDlgItem(IDC_STATIC_3RD)->SetWindowText(strTemp);
-	strTemp.Format(" #%d", nTemp4);		GetDlgItem(IDC_STATIC_4TH)->SetWindowText(strTemp);
-	strTemp.Format(" #%d", nTemp5);		GetDlgItem(IDC_STATIC_5TH)->SetWindowText(strTemp);
-	strTemp.Format(" #%d", nTemp6);		GetDlgItem(IDC_STATIC_6TH)->SetWindowText(strTemp);
-
-	
-	for (int i = 0 ; i < 6 ; i++)
-	{
-		int nTrackNo = nTempTempTemp[i];
-
-		strTemp.Format("%04d", m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_nLuggNum);
-		GetDlgItem(IDC_EDIT_LUGG_NUM6 - i)->SetWindowText(strTemp);									// 배열을 잘못 세팅해서 큰거에서 빼기해줘야함 
-	
-		strTemp.Format("%04d", m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_nLuggNum2);
-		GetDlgItem(IDC_EDIT_LUGG_NUM12 - i)->SetWindowText(strTemp);								// 배열을 잘못 세팅해서 큰거에서 빼기해줘야함 
-		
-		strTemp = (m_pDoc->m_ConveyorTrackInfo[nTrackNo].m_bPltSensor == TRUE) ? "있음" : "없음"; 
-		SET(IDC_EDIT_PLT_SENSOR6 - i, strTemp);														// 배열을 잘못 세팅해서 큰거에서 빼기해줘야함 
-	}
-
-
-	// 일단은 표시하자		- NULL로 세팅을 해야 함! 
-	CString strTime;
-	strTime = (m_pDoc != NULL && m_pDoc->m_timeFullReady[m_nID] != NULL) ? m_pDoc->m_timeFullReady[m_nID].Format("%Y/%m/%d/ %H:%M:%S") : "";
-	GetDlgItem(IDC_EDIT_READY_TIME)->SetWindowText(strTime);
-	strTime = (m_pDoc != NULL && m_pDoc->m_timeStart[m_nID] != NULL) ? m_pDoc->m_timeStart[m_nID].Format("%Y/%m/%d/ %H:%M:%S") : "";
-	GetDlgItem(IDC_EDIT_START_TIME)->SetWindowText(strTime);
-
-
-	m_bSuspend = m_pDoc->m_bBufferSuspend[m_nID];
-	m_bReady = m_pDoc->m_bBufferReady[m_nID];
-	UpdateData(FALSE);
-	//*/
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
 }
-/*
-void CBufferDestSettingDlg::OnCheckSuspend() 
+
+void CBufferDestSettingDlg::OnRangeRadioGroup(UINT uID)
 {
-//	m_pDoc->m_bBufferSuspend[m_nID] = !m_pDoc->m_bBufferSuspend[m_nID];
-//
-//	m_bSuspend = m_pDoc->m_bBufferSuspend[m_nID];
-//	UpdateData(FALSE);
+	int nDest = 0;
+	CString strTemp;
+	switch (uID)
+	{
+	case IDC_RADIO1:
+		strTemp = _T("[15] TR# 174 :");
+		nDest = 15;
+		break;
+	case IDC_RADIO2:
+		strTemp = _T("[16] TR# 176 :");
+		nDest = 16;
+		break;
+	default:
+		AfxMessageBox(_T("목적지를 선택해주세요"));
+		return;
+	}
+	SetDlgItemText(IDC_STATIC_WRAP_DEST, strTemp);
+	m_pDoc->m_nBufferDest1 = nDest;
+
 }
 
-// 일단 이거는 읽어오는 걸로만 하자!
-
-void CBufferDestSettingDlg::OnCheckReady() 
+void CBufferDestSettingDlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 {
-//	m_pDoc->m_bBufferReady[m_nID] = !m_pDoc->m_bBufferReady[m_nID];
-//
-//	m_bReady = m_pDoc->m_bBufferReady[m_nID];
-//	UpdateData(FALSE);
+	// 슬라이더의 위치를 검사한다. 
+	nPos = m_Slider.GetPos();
+
+	m_nDest1To = nPos;
+	m_nDest2From = ++nPos;
+
+	UpdateData(FALSE);
+
+	CDialog::OnHScroll(nSBCode, nPos, pScrollBar);
 }
-//*/
+
+
+void CBufferDestSettingDlg::OnButtonSave()
+{
+	UpdateData(TRUE);
+
+	m_pDoc->m_nBufferDest1To = m_nDest1To;
+}
